@@ -24,7 +24,7 @@
 </head>
 <body>
 <h1>Privacy Policy for Chat LLM</h1>
-<p><strong>Last updated: 23 December 2025</strong></p>
+<p><strong>Last updated: 27 December 2025</strong></p>
 <p>
 Chat LLM is developed and maintained by <strong>David Picknell</strong> ("we", "us", "our").  
 This Privacy Policy explains how the app handles your data and what information is transmitted
@@ -69,10 +69,28 @@ When using cloud inference:
 Cloud inference is text-only and does not support image or document uploads.
 </p>
 
-<h2>3. Bring Your Own API Key (Advanced Option)</h2>
+<h2>3. Voice Chat (Optional)</h2>
+<p>
+Chat LLM offers real-time voice conversation powered by Grok's speech API. This feature requires you to provide
+your own xAI API key obtained from <a href="https://x.ai" target="_blank">x.ai</a>.
+When using voice chat:
+</p>
+<ul>
+    <li>Your voice input is transmitted directly to xAI (Grok)</li>
+    <li>Audio is processed in real-time for speech recognition and AI response generation</li>
+    <li>Conversation transcripts are generated and stored locally on your device</li>
+    <li>Your xAI API key is stored only on your device and never transmitted to our servers</li>
+</ul>
+<p>
+<strong>Chat LLM does not store your voice data or conversation transcripts on our servers.</strong> All voice processing
+is handled directly by xAI, and transcripts are saved only on your device. Voice chat is text-only and does not support
+image or document uploads.
+</p>
+
+<h2>4. Bring Your Own API Key (Advanced Option)</h2>
 <p>
 Chat LLM optionally allows you to connect your own API keys to access additional cloud-based AI models
-through third-party providers such as <strong>OpenRouter</strong> and <strong>OpenAI</strong>.
+through third-party providers such as <strong>OpenRouter</strong>, <strong>OpenAI</strong>, and <strong>xAI</strong>.
 </p>
 <p>
 If you choose to use your own API keys, you may input and upload:
@@ -81,14 +99,15 @@ If you choose to use your own API keys, you may input and upload:
     <li>Text prompts</li>
     <li>Images (vision-capable models only)</li>
     <li>Documents (vision-capable models only)</li>
+    <li>Voice input (xAI voice chat only)</li>
 </ul>
 <p>
 This content is transmitted directly from your device to the third-party AI provider you have selected.
-Chat LLM does <strong>not</strong> store your prompts, images, or documents on its own servers.
+Chat LLM does <strong>not</strong> store your prompts, images, documents, or voice data on its own servers.
 Your API keys are stored only on your device and are never transmitted to our servers.
 </p>
 
-<h2>4. How Your Data Is Used</h2>
+<h2>5. How Your Data Is Used</h2>
 <p><strong>Local Model:</strong></p>
 <p>
 When using the built-in local model, all processing happens on your device. No data leaves your device,
@@ -101,70 +120,77 @@ When using the free cloud inference option, your text prompts are transmitted th
 to the AI provider. We do not store, log, or retain your prompts or responses. All processing is real-time only.
 </p>
 
+<p><strong>Voice Chat:</strong></p>
+<p>
+When using voice chat, your voice input and conversations are transmitted directly to xAI (Grok) for processing.
+Chat LLM does not store your voice data or transcripts on our servers. Transcripts are saved locally on your device only.
+</p>
+
 <p><strong>Bring Your Own API Key:</strong></p>
 <p>
 When you use cloud models with your own API key, Chat LLM securely transmits your content directly to
-the third-party AI service (OpenRouter or OpenAI, depending on the model you select).
+the third-party AI service (OpenRouter, OpenAI, or xAI, depending on the model you select).
 These services process your request and return an AI-generated response, which is displayed in the app.
 </p>
 
 <p><strong>Chat LLM does not:</strong></p>
 <ul>
-    <li>Store your prompts or uploaded content</li>
+    <li>Store your prompts, voice data, or uploaded content</li>
     <li>Store your API keys on our servers</li>
     <li>Create or manage user accounts</li>
     <li>Collect analytics or tracking data</li>
     <li>Sell or share data with advertisers</li>
 </ul>
 
-<h2>5. Third-Party Data Retention</h2>
+<h2>6. Third-Party Data Retention</h2>
 <p>
-While Chat LLM does not retain your content, when using cloud inference or cloud models with your own API keys,
+While Chat LLM does not retain your content, when using cloud inference, voice chat, or cloud models with your own API keys,
 third-party providers may store or log data in accordance with their own policies. You should review those policies
 to understand how your data is handled:
 </p>
 <ul>
     <li><strong>Groq (Cloud Inference):</strong> <a href="https://groq.com/privacy-policy/">https://groq.com/privacy-policy/</a></li>
+    <li><strong>xAI (Voice Chat):</strong> <a href="https://x.ai/legal/privacy-policy/">https://x.ai/legal/privacy-policy/</a></li>
     <li><strong>OpenRouter:</strong> <a href="https://openrouter.ai/privacy">https://openrouter.ai/privacy</a></li>
     <li><strong>OpenAI:</strong> <a href="https://openai.com/policies/row-privacy-policy/">https://openai.com/policies/row-privacy-policy/</a></li>
 </ul>
 <p>
-By using cloud inference or cloud models in Chat LLM, you acknowledge that any data sent to these providers is subject
+By using cloud inference, voice chat, or cloud models in Chat LLM, you acknowledge that any data sent to these providers is subject
 to their respective terms and privacy policies. <strong>This does not apply when using the built-in local model,
 as no data leaves your device.</strong>
 </p>
 
-<h2>6. No Tracking or Analytics</h2>
+<h2>7. No Tracking or Analytics</h2>
 <p>
 Chat LLM does not include analytics SDKs, advertising trackers, or other third-party tracking tools.
 We do not build profiles of users or track behaviour across apps or websites.
 </p>
 
-<h2>7. Security</h2>
+<h2>8. Security</h2>
 <p>
 When using the built-in local model, all data remains on your device with no network transmission.
 </p>
 <p>
-When using cloud inference or cloud models with your own API keys, all communication with AI providers is transmitted
+When using cloud inference, voice chat, or cloud models with your own API keys, all communication with AI providers is transmitted
 over HTTPS using industry-standard encryption. However, no method of transmission over the internet is entirely risk-free,
 and you should avoid sending highly sensitive or confidential information through cloud-based services.
 </p>
 
-<h2>8. Your Rights</h2>
+<h2>9. Your Rights</h2>
 <p>
 Because Chat LLM does not store personal data or content on our servers, there is no user data held by us
-to access, export, or delete. Conversations with the local model are stored only on your device and can be
+to access, export, or delete. Conversations with the local model and voice chat transcripts are stored only on your device and can be
 deleted through the app's interface. Any data sent to third-party cloud providers would be managed according
 to their policies, and you would need to contact them directly where applicable.
 </p>
 
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 <p>
 If you have any questions or concerns about this Privacy Policy, please contact:<br>
 <strong>Email:</strong> <a href="mailto:ferrraridave@icloud.com">ferrraridave@icloud.com</a>
 </p>
 
-<h2>10. Changes to This Policy</h2>
+<h2>11. Changes to This Policy</h2>
 <p>
 We may update this Privacy Policy from time to time. The latest version will always be available on
 this page. Continued use of Chat LLM after changes are posted means you accept the updated Policy.
