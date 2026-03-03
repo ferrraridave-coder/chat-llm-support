@@ -22,6 +22,7 @@
 
         a {
             color: #89b4ff;
+            word-break: break-word;
         }
     </style>
 </head>
@@ -63,7 +64,7 @@ When using the local model:
 This feature is only available in Chat LLM. LLM Pro operates exclusively using cloud-based services.
 </p>
 
-<h2>2. Free Cloud AI Access</h2>
+<h2>2. Free Cloud AI Access (Groq)</h2>
 
 <p>
 Both Chat LLM and LLM Pro provide free cloud AI access without requiring an API key.
@@ -71,8 +72,8 @@ When using free cloud AI:
 </p>
 
 <ul>
-    <li>Your text prompts are sent to our backend server</li>
-    <li>Requests are forwarded to the AI provider</li>
+    <li>Your text prompts and conversation content are sent to our backend server</li>
+    <li>Requests are forwarded to <strong>Groq</strong> to generate AI responses</li>
     <li>Responses are returned to your device</li>
     <li>No account or API key is required</li>
 </ul>
@@ -91,10 +92,11 @@ When using premium subscription features:
 </p>
 
 <ul>
-    <li>Your prompts and image requests are sent to supported AI providers</li>
+    <li>Your prompts and conversation content are sent to supported AI providers to generate AI responses</li>
+    <li>Depending on the model selected, requests are sent to <strong>Groq</strong> and/or <strong>Cerebras</strong></li>
     <li>Requests may pass through our backend server where required</li>
-    <li>Responses and generated images are returned to your device</li>
-    <li>Some models may retrieve up-to-date information via web search (powered by Serper)</li>
+    <li>Responses are returned to your device</li>
+    <li>Some models may retrieve up-to-date information via web search (powered by <strong>Serper</strong>)</li>
     <li>Subscriptions are managed entirely through Apple’s App Store</li>
 </ul>
 
@@ -103,17 +105,16 @@ When using premium subscription features:
 All processing is performed in real time and data is discarded after delivery.
 </p>
 
-<h2>4. AI Image Generation (LLM Pro Only)</h2>
+<h2>4. AI Image Generation (LLM Pro Only) (Replicate)</h2>
 
 <p>
 LLM Pro includes built-in AI image generation and image-to-image editing.
-Image generation is provided via third-party AI services, including Replicate.
-When using image generation:
+When using image generation or editing:
 </p>
 
 <ul>
-    <li>Text prompts and optional source images are transmitted to Replicate or other supported providers</li>
-    <li>Generated images are returned directly to your device</li>
+    <li>Text prompts and any selected source images are transmitted to <strong>Replicate</strong> for processing</li>
+    <li>Generated images are returned to your device</li>
     <li>Image usage limits are enforced and displayed in-app</li>
 </ul>
 
@@ -121,16 +122,16 @@ When using image generation:
 <strong>We do not store image prompts or generated images on our servers.</strong>
 </p>
 
-<h2>5. Voice Chat (Optional Feature)</h2>
+<h2>5. Voice Chat (Optional Feature) (xAI)</h2>
 
 <p>
-Both Chat LLM and LLM Pro optionally support real-time voice conversations using third-party providers.
+Both Chat LLM and LLM Pro optionally support real-time voice conversations using <strong>xAI</strong>.
 This feature requires you to supply your own compatible API key.
 When using voice chat:
 </p>
 
 <ul>
-    <li>Your voice input is transmitted directly to the selected voice provider</li>
+    <li>Your spoken input and conversation content are transmitted to <strong>xAI</strong> to generate AI responses</li>
     <li>Audio is processed in real time for speech recognition and response generation</li>
     <li>Conversation transcripts may be stored locally on your device</li>
     <li>Your API keys are stored only on your device</li>
@@ -152,6 +153,11 @@ If you choose to use this feature:
     <li>Prompts, images, documents, and voice data are handled by that provider</li>
     <li>API keys are stored only on your device</li>
 </ul>
+
+<p>
+This feature may include providers such as <strong>OpenRouter</strong>, <strong>OpenAI</strong>, and <strong>xAI</strong>.
+If you use OpenRouter, OpenRouter may route requests to different model providers depending on the model selected.
+</p>
 
 <p>
 We do not receive, store, or log content sent using your own API keys.
@@ -177,7 +183,7 @@ We do not sell or share user data with advertisers.
 
 <p>
 While we do not retain your content, third-party AI providers and services may process or retain data
-according to their own privacy policies:
+according to their own privacy policies and terms:
 </p>
 
 <ul>
