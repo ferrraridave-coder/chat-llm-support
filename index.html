@@ -48,7 +48,7 @@
 <h3>What are Chat LLM and LLM Pro?</h3>
 
 <p>
-    <strong>Chat LLM</strong> is a privacy-focused AI chat app for iPhone and iPad. It supports free cloud AI,
+    <strong>Chat LLM</strong> is a privacy-focused AI chat app for iPhone and iPad. It supports a free cloud AI model,
     optional bring-your-own API keys, and advanced features such as real-time voice chat and access to
     a wide range of external AI models.
 </p>
@@ -63,15 +63,16 @@
 
 <p>
     <strong>Chat LLM:</strong><br>
-    No account or API key is required to get started. The app includes free cloud AI access.
+    No account or API key is required to get started. The app includes free cloud AI access powered by Groq.
     You may optionally add your own OpenRouter, OpenAI, or xAI API keys to access additional models
     and real-time voice chat.
 </p>
 
 <p>
     <strong>LLM Pro:</strong><br>
-    No account or API key is required to get started. The app includes free cloud AI access.
-    A premium subscription unlocks additional cloud models and AI image generation.
+    No account or API key is required to get started. The app includes free cloud AI access powered by Groq.
+    A premium subscription unlocks additional cloud models powered by Groq and Cerebras,
+    as well as AI image generation.
     Optional bring-your-own API keys are supported for advanced users.
 </p>
 
@@ -79,15 +80,15 @@
 
 <p>
     <strong>Chat LLM:</strong><br>
-    - Free cloud AI model available without an API key<br>
-    - Optional bring-your-own API keys for access to a wide range of third-party models<br>
-    - Optional real-time voice chat (requires xAI API key)
+    - Free cloud AI model powered by Groq<br>
+    - Optional bring-your-own API keys for access to third-party models via OpenRouter, OpenAI, or xAI<br>
+    - Optional real-time voice chat powered by xAI
 </p>
 
 <p>
     <strong>LLM Pro:</strong><br>
-    - Free cloud AI model available without a subscription<br>
-    - Premium subscription unlocks curated high-performance cloud AI models<br>
+    - Free cloud AI model powered by Groq<br>
+    - Premium subscription unlocks curated high-performance cloud AI models powered by Groq and Cerebras<br>
     - Vision-capable models for image analysis<br>
     - Optional bring-your-own API keys for access to additional third-party models
 </p>
@@ -96,6 +97,7 @@
 
 <p>
     LLM Pro includes built-in AI image generation and image-to-image editing.
+    Image generation and editing are processed via Replicate.
     The premium subscription includes up to <strong>100 images per month</strong>.
     Image usage is clearly displayed in-app.
 </p>
@@ -110,25 +112,47 @@
 <h3>What is real-time Voice Chat?</h3>
 
 <p>
-    Real-time Voice Chat enables spoken conversations with AI using supported providers.
+    Real-time Voice Chat enables spoken conversations with AI powered by xAI.
     This feature requires your own compatible API key.
-    Voice data is processed by the selected voice provider.
+    Spoken input and conversation content are processed by xAI.
 </p>
 
 <h3>How is my data handled?</h3>
 
 <p>
-    <strong>Free Cloud AI:</strong> Messages are sent to the AI provider to generate responses.
-    Conversations are not stored on our servers.<br><br>
+    <strong>Free Cloud AI (Groq):</strong><br>
+    Messages and conversation content are sent to <strong>Groq</strong> to generate AI responses.
+    Conversations are not stored on our servers.
+</p>
 
-    <strong>LLM Pro – Premium Features:</strong> Messages and image prompts are processed via
-    supported AI providers. We do not store conversations, images, or documents.<br><br>
+<p>
+    <strong>LLM Pro – Premium Cloud Models (Groq & Cerebras):</strong><br>
+    Depending on the model selected, messages and conversation content are sent to
+    <strong>Groq</strong> or <strong>Cerebras</strong> to generate AI responses.
+    We do not store conversations, images, or documents on our servers.
+</p>
 
-    <strong>Bring Your Own API Key:</strong> Content is sent directly to the selected provider.
-    API keys are stored only on your device.<br><br>
+<p>
+    <strong>Bring Your Own API Key (OpenRouter, OpenAI, xAI):</strong><br>
+    When you use your own API key, messages and content are sent directly to the selected provider,
+    such as <strong>OpenRouter</strong>, <strong>OpenAI</strong>, or <strong>xAI</strong>.
+    OpenRouter may route requests to different model providers depending on the model selected.
+    API keys are stored only on your device.
+</p>
 
-    <strong>Voice Chat:</strong> Voice data is sent directly to the voice provider.
+<p>
+    <strong>Voice Chat (xAI):</strong><br>
+    When using real-time voice chat, spoken input and conversation content are sent to
+    <strong>xAI</strong> to generate AI responses.
     No voice data or transcripts are stored on our servers.
+</p>
+
+<p>
+    <strong>AI Image Generation (Replicate):</strong><br>
+    When generating or editing images, prompt text and any selected images are sent to
+    <strong>Replicate</strong> for processing.
+    Replicate processes this data to generate AI images within the app.
+    Images are not stored on our servers.
 </p>
 
 <h3>Can I use the app offline?</h3>
@@ -148,8 +172,9 @@
 <h3>What is the LLM Pro subscription?</h3>
 
 <p>
-    LLM Pro offers a £9.99/month subscription that unlocks premium cloud AI models,
-    real-time web search on supported models, and AI image generation with a monthly limit.
+    LLM Pro offers a £9.99/month subscription that unlocks premium cloud AI models powered by Groq and Cerebras,
+    real-time web search on supported models, and AI image generation processed via Replicate
+    with a monthly limit.
 </p>
 
 <h3>What devices are supported?</h3>
