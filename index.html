@@ -48,9 +48,10 @@
 <h3>What are Chat LLM and LLM Pro?</h3>
 
 <p>
-    <strong>Chat LLM</strong> is a privacy-focused AI chat app for iPhone and iPad. It supports a free cloud AI model,
-    optional bring-your-own API keys, and advanced features such as real-time voice chat and access to
-    a wide range of external AI models.
+    <strong>Chat LLM</strong> is a privacy-focused AI chat app for iPhone and iPad. It supports a free local
+    on-device AI model, a free cloud AI model, optional bring-your-own API keys, and advanced features
+    such as real-time voice chat with live web search, image and document uploads, and access to hundreds
+    of external AI models.
 </p>
 
 <p>
@@ -63,9 +64,10 @@
 
 <p>
     <strong>Chat LLM:</strong><br>
-    No account or API key is required to get started. The app includes free cloud AI access powered by Groq.
-    You may optionally add your own OpenRouter, OpenAI, or xAI API keys to access additional models
-    and real-time voice chat.
+    No account or API key is required to get started. The app includes a free on-device AI model that
+    works completely offline, and free cloud AI access powered by Groq.
+    You may optionally add your own OpenRouter, OpenAI, or Gemini API keys to access additional models,
+    real-time voice chat, and web search.
 </p>
 
 <p>
@@ -80,9 +82,10 @@
 
 <p>
     <strong>Chat LLM:</strong><br>
+    - Free on-device AI model (Llama 3.2, runs locally — no internet required)<br>
     - Free cloud AI model powered by Groq<br>
-    - Optional bring-your-own API keys for access to third-party models via OpenRouter, OpenAI, or xAI<br>
-    - Optional real-time voice chat powered by xAI
+    - Optional bring-your-own API keys for access to 300+ third-party models via OpenRouter or OpenAI<br>
+    - Optional real-time voice chat powered by Gemini (requires a Gemini API key)
 </p>
 
 <p>
@@ -105,19 +108,45 @@
 <h3>What is real-time web search?</h3>
 
 <p>
-    Real-time web search allows supported AI models to retrieve up-to-date information.
-    Availability depends on the selected model and requires an internet connection.
+    <strong>Chat LLM</strong> supports two forms of real-time web search:
+</p>
+<p>
+    <strong>OpenRouter Web Search (text chat):</strong><br>
+    When enabled in settings, OpenRouter performs a live web search before the selected model responds
+    and feeds the results into its context. This works with any OpenRouter model and is useful for
+    current events, news, prices, or anything beyond the model's training data.
+    A small per-search fee (~$0.004) is charged to your OpenRouter account on top of the normal model cost.
+</p>
+<p>
+    <strong>Gemini Voice Chat Web Search:</strong><br>
+    Real-time voice chat powered by Gemini includes built-in Google Search grounding at no extra cost.
+    Gemini automatically searches the web when you ask about current events, weather, sports results,
+    or other live information, and weaves the results naturally into its spoken reply.
+</p>
+<p>
+    <strong>LLM Pro:</strong><br>
+    Real-time web search is available on supported premium models and requires an internet connection.
 </p>
 
 <h3>What is real-time Voice Chat?</h3>
 
 <p>
-    Real-time Voice Chat enables spoken conversations with AI powered by xAI.
-    This feature requires your own compatible API key.
-    Spoken input and conversation content are processed by xAI.
+    <strong>Chat LLM:</strong><br>
+    Real-time Voice Chat enables natural spoken conversations with AI powered by Google Gemini.
+    This feature requires your own Gemini API key.
+    Spoken input and conversation content are processed by Google.
+    Voice chat includes built-in Google Search grounding, so Gemini can answer questions about
+    current events and live information during your conversation.
+    You can also attach photos or camera images mid-conversation for Gemini to discuss.
 </p>
 
 <h3>How is my data handled?</h3>
+
+<p>
+    <strong>On-Device AI (Local Llama model):</strong><br>
+    When using the local Llama model in Chat LLM, all processing happens entirely on your device.
+    No messages, data, or personal information are sent to any server.
+</p>
 
 <p>
     <strong>Free Cloud AI (Groq):</strong><br>
@@ -133,18 +162,21 @@
 </p>
 
 <p>
-    <strong>Bring Your Own API Key (OpenRouter, OpenAI, xAI):</strong><br>
+    <strong>Bring Your Own API Key (OpenRouter, OpenAI):</strong><br>
     When you use your own API key, messages and content are sent directly to the selected provider,
-    such as <strong>OpenRouter</strong>, <strong>OpenAI</strong>, or <strong>xAI</strong>.
+    such as <strong>OpenRouter</strong> or <strong>OpenAI</strong>.
     OpenRouter may route requests to different model providers depending on the model selected.
+    When OpenRouter web search is enabled, search queries are also processed by OpenRouter.
     API keys are stored only on your device.
 </p>
 
 <p>
-    <strong>Voice Chat (xAI):</strong><br>
-    When using real-time voice chat, spoken input and conversation content are sent to
-    <strong>xAI</strong> to generate AI responses.
+    <strong>Voice Chat (Google Gemini):</strong><br>
+    When using real-time voice chat, spoken input, conversation content, and any images you attach
+    are sent to <strong>Google</strong> to generate AI responses.
+    Google Search grounding may be used automatically to answer questions requiring live information.
     No voice data or transcripts are stored on our servers.
+    Your Gemini API key is stored only on your device.
 </p>
 
 <p>
@@ -158,7 +190,9 @@
 <h3>Can I use the app offline?</h3>
 
 <p>
-    <strong>Chat LLM:</strong> Requires an internet connection for cloud features.<br><br>
+    <strong>Chat LLM:</strong> The free on-device Llama model works fully offline with no internet
+    connection required. All cloud-based features — including Groq, OpenRouter, OpenAI, and Gemini
+    voice chat — require an internet connection.<br><br>
     <strong>LLM Pro:</strong> Requires an internet connection for all features.
 </p>
 
