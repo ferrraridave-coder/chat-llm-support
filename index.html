@@ -77,7 +77,8 @@
     No account or API key is required to get started. The app includes free cloud AI access powered by Groq.
     A premium subscription unlocks additional cloud models powered by Groq and Cerebras,
     AI image generation, and spoken playback of AI replies — all included, no third-party keys required.
-    Optional bring-your-own API keys are also supported for advanced users.
+    Optional bring-your-own API keys are also supported for advanced users, including an xAI key for
+    real-time voice chat.
 </p>
 
 <h3>What models are supported?</h3>
@@ -97,6 +98,7 @@
     - Premium subscription unlocks curated high-performance cloud AI models powered by Groq and Cerebras<br>
     - Vision-capable models for image analysis<br>
     - Spoken playback of AI replies powered by Kokoro TTS via Replicate (included with subscription, no key required)<br>
+    - Optional real-time voice chat powered by xAI's Grok voice model (requires an xAI API key)<br>
     - Optional bring-your-own API keys for access to additional third-party models
 </p>
 
@@ -146,6 +148,16 @@
     You can also attach photos or camera images mid-conversation for Gemini to discuss.
     The voice assistant's personality, accent, speech style, and behaviour can be shaped through
     the system prompt.
+</p>
+
+<p>
+    <strong>LLM Pro:</strong><br>
+    Real-time Voice Chat enables natural spoken conversations with AI powered by xAI's Grok voice model.
+    This feature requires your own xAI API key.
+    Spoken input and conversation content are processed by xAI.
+    The voice model performs background reasoning so it can think through more challenging questions
+    before answering, with no impact on response latency.
+    The voice assistant's personality, style, and behaviour can be shaped through the system prompt.
 </p>
 
 <h3>What is spoken playback of AI replies?</h3>
@@ -204,12 +216,20 @@
 </p>
 
 <p>
-    <strong>Voice Chat (Google Gemini):</strong><br>
-    When using real-time voice chat, spoken input, conversation content, and any images you attach
-    are sent to <strong>Google</strong> to generate AI responses.
+    <strong>Voice Chat (Google Gemini, Chat LLM):</strong><br>
+    When using real-time voice chat in Chat LLM, spoken input, conversation content, and any images
+    you attach are sent to <strong>Google</strong> to generate AI responses.
     Google Search grounding may be used automatically to answer questions requiring live information.
     No voice data or transcripts are stored on our servers.
     Your Gemini API key is stored only on your device.
+</p>
+
+<p>
+    <strong>Voice Chat (xAI, LLM Pro):</strong><br>
+    When using real-time voice chat in LLM Pro, spoken input and conversation content are sent to
+    <strong>xAI</strong> to generate AI responses.
+    No voice data or transcripts are stored on our servers.
+    Your xAI API key is stored only on your device.
 </p>
 
 <p>
