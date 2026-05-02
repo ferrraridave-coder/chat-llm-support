@@ -48,10 +48,11 @@
 <h3>What are Chat LLM and LLM Pro?</h3>
 
 <p>
-    <strong>Chat LLM</strong> is a privacy-focused AI chat app for iPhone and iPad. It supports a free local
-    on-device AI model, a free cloud AI model, optional bring-your-own API keys, and advanced features
-    such as real-time voice chat with live web search, image and document uploads, and access to hundreds
-    of external AI models.
+    <strong>Chat LLM</strong> is a privacy-focused AI chat app for iPhone and iPad. It offers a free
+    cloud AI model out of the box, an optional on-device AI model that runs entirely offline once
+    downloaded, optional bring-your-own API keys, and advanced features such as real-time voice chat
+    with live web search, spoken playback of AI replies, image and document uploads, and access to
+    hundreds of external AI models.
 </p>
 
 <p>
@@ -64,10 +65,11 @@
 
 <p>
     <strong>Chat LLM:</strong><br>
-    No account or API key is required to get started. The app includes a free on-device AI model that
-    works completely offline, and free cloud AI access powered by Groq.
-    You may optionally add your own OpenRouter, OpenAI, or Gemini API keys to access additional models,
-    real-time voice chat, and web search.
+    No account or API key is required to get started. The app includes free cloud AI access powered by Groq,
+    which works immediately on first launch.
+    You may optionally add your own OpenRouter, OpenAI, Gemini, or Replicate API keys to unlock additional
+    features: 300+ third-party models, real-time voice chat, OpenRouter web search, and spoken playback
+    of AI replies.
 </p>
 
 <p>
@@ -82,10 +84,11 @@
 
 <p>
     <strong>Chat LLM:</strong><br>
-    - Free on-device AI model (Llama 3.2, runs locally — no internet required)<br>
-    - Free cloud AI model powered by Groq<br>
+    - Free cloud AI model powered by Groq (works immediately, no key required)<br>
+    - Optional on-device AI model (Llama 3.2, downloaded on demand from the model picker — runs locally and works offline once installed)<br>
     - Optional bring-your-own API keys for access to 300+ third-party models via OpenRouter or OpenAI<br>
-    - Optional real-time voice chat powered by Gemini (requires a Gemini API key)
+    - Optional real-time voice chat powered by Google Gemini Live (requires a Gemini API key)<br>
+    - Optional spoken playback of AI replies powered by Kokoro TTS via Replicate (requires a Replicate API key)
 </p>
 
 <p>
@@ -115,11 +118,13 @@
     When enabled in settings, OpenRouter performs a live web search before the selected model responds
     and feeds the results into its context. This works with any OpenRouter model and is useful for
     current events, news, prices, or anything beyond the model's training data.
+    Search results are region-aware: the app passes your device locale to the search step so users
+    outside the US receive region-relevant sources on the first attempt.
     A small per-search fee (~$0.004) is charged to your OpenRouter account on top of the normal model cost.
 </p>
 <p>
     <strong>Gemini Voice Chat Web Search:</strong><br>
-    Real-time voice chat powered by Gemini includes built-in Google Search grounding at no extra cost.
+    Real-time voice chat powered by Gemini Live includes built-in Google Search grounding at no extra cost.
     Gemini automatically searches the web when you ask about current events, weather, sports results,
     or other live information, and weaves the results naturally into its spoken reply.
 </p>
@@ -132,20 +137,37 @@
 
 <p>
     <strong>Chat LLM:</strong><br>
-    Real-time Voice Chat enables natural spoken conversations with AI powered by Google Gemini.
+    Real-time Voice Chat enables natural spoken conversations with AI powered by Google Gemini Live.
     This feature requires your own Gemini API key.
     Spoken input and conversation content are processed by Google.
     Voice chat includes built-in Google Search grounding, so Gemini can answer questions about
     current events and live information during your conversation.
     You can also attach photos or camera images mid-conversation for Gemini to discuss.
+    The voice assistant's personality, accent, speech style, and behaviour can be shaped through
+    the system prompt.
+</p>
+
+<h3>What is spoken playback of AI replies?</h3>
+
+<p>
+    <strong>Chat LLM</strong> can read any AI reply aloud using the Kokoro voice model via Replicate.
+    Tap the play button next to any AI message to hear it spoken, with a choice of more than thirty
+    voices, adjustable playback speed, and full lock-screen and Control Centre controls.
+    This feature requires your own Replicate API key, which is added in Settings then API Keys.
+    Once a key is set, the play button appears next to AI messages and a Voice Playback option
+    appears in the menu where you can change voice, speed, and audio cache size.
+    Generation costs are charged to your own Replicate credits at Replicate's standard per-second rate
+    (typically a fraction of a cent per reply).
 </p>
 
 <h3>How is my data handled?</h3>
 
 <p>
     <strong>On-Device AI (Local Llama model):</strong><br>
-    When using the local Llama model in Chat LLM, all processing happens entirely on your device.
+    When using the on-device Llama model in Chat LLM, all processing happens entirely on your device.
     No messages, data, or personal information are sent to any server.
+    The model itself is downloaded from Hugging Face on first use; only the download itself contacts
+    Hugging Face, no chat content is ever sent there.
 </p>
 
 <p>
@@ -180,8 +202,17 @@
 </p>
 
 <p>
+    <strong>Spoken Playback of AI Replies (Replicate / Kokoro):</strong><br>
+    When you tap play on an AI message in Chat LLM, the message text is sent to
+    <strong>Replicate</strong> using your own API key, where the Kokoro voice model converts it to audio.
+    The generated audio is downloaded to your device and cached locally so repeated playbacks
+    do not re-incur generation cost. No message text is stored on our servers.
+    Your Replicate API key is stored only on your device.
+</p>
+
+<p>
     <strong>AI Image Generation (Replicate):</strong><br>
-    When generating or editing images, prompt text and any selected images are sent to
+    When generating or editing images in LLM Pro, prompt text and any selected images are sent to
     <strong>Replicate</strong> for processing.
     Replicate processes this data to generate AI images within the app.
     Images are not stored on our servers.
@@ -190,9 +221,10 @@
 <h3>Can I use the app offline?</h3>
 
 <p>
-    <strong>Chat LLM:</strong> The free on-device Llama model works fully offline with no internet
-    connection required. All cloud-based features — including Groq, OpenRouter, OpenAI, and Gemini
-    voice chat — require an internet connection.<br><br>
+    <strong>Chat LLM:</strong> The optional on-device Llama model works fully offline once downloaded
+    from the model picker — no internet connection is required after that initial download.
+    All cloud-based features — including Groq, OpenRouter, OpenAI, Gemini voice chat, and Replicate
+    spoken playback — require an internet connection.<br><br>
     <strong>LLM Pro:</strong> Requires an internet connection for all features.
 </p>
 
