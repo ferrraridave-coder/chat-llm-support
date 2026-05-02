@@ -30,7 +30,7 @@
 
 <h1>Privacy Policy for Chat LLM and LLM Pro</h1>
 
-<p><strong>Last updated: 1 May 2026</strong></p>
+<p><strong>Last updated: 2 May 2026</strong></p>
 
 <p>
 Chat LLM and LLM Pro are developed and maintained by <strong>David Picknell</strong> ("we", "us", "our").
@@ -44,19 +44,23 @@ Useful links:<br>
 - <a href="terms.html">Terms of Use</a>
 </p>
 
-<h2>1. Built-in Local AI Model (Chat LLM Only)</h2>
+<h2>1. On-Device Local AI Model (Chat LLM Only)</h2>
 
 <p>
-Chat LLM includes an optional built-in local AI model that runs entirely on your device.
-When using the local model:
+Chat LLM offers an optional on-device AI model that runs entirely on your device.
+The model is not bundled with the app: it is downloaded on demand from <strong>Hugging Face</strong>
+the first time you tap the Local LLM card in the model picker.
+After this initial download, the model runs locally and works offline.
 </p>
 
 <ul>
-    <li>All conversations remain on your device</li>
-    <li>No data is transmitted to any external servers</li>
-    <li>The app can function offline</li>
+    <li>The download itself contacts Hugging Face to fetch the model files; no chat content is sent during this step</li>
+    <li>Once downloaded, all conversations remain on your device</li>
+    <li>No chat content is ever transmitted to any external server when using the local model</li>
+    <li>The app can function offline once the model is on the device</li>
     <li>No account or API key is required</li>
     <li>Prompts and responses are stored locally on your device only</li>
+    <li>You can delete the downloaded model from the model picker at any time to reclaim storage</li>
 </ul>
 
 <p>
@@ -122,7 +126,29 @@ When using image generation or editing:
 <strong>We do not store image prompts or generated images on our servers.</strong>
 </p>
 
-<h2>5. Voice Chat</h2>
+<h2>5. Spoken Playback of AI Replies (Chat LLM Only) (Replicate)</h2>
+
+<p>
+Chat LLM optionally lets you play any AI reply aloud using the Kokoro voice model
+hosted on <strong>Replicate</strong>. This feature requires you to supply your own Replicate API key,
+which is added in Settings then API Keys. The play button next to AI messages and the
+Voice Playback option in the menu only appear once a key has been entered.
+When using spoken playback:
+</p>
+
+<ul>
+    <li>The text of the selected AI message is transmitted to <strong>Replicate</strong> using your own API key</li>
+    <li>Replicate generates an audio file using the Kokoro voice model and returns it to your device</li>
+    <li>Audio is cached locally on your device so repeat playback of the same message does not re-incur a generation cost</li>
+    <li>Generation costs are billed to your Replicate account at Replicate's standard rate</li>
+    <li>Your Replicate API key is stored only on your device</li>
+</ul>
+
+<p>
+<strong>We do not store message text, audio, or your API key on our servers.</strong>
+</p>
+
+<h2>6. Voice Chat</h2>
 
 <p>
 <strong>Chat LLM — Real-time Voice Chat (Google Gemini):</strong><br>
@@ -158,7 +184,7 @@ When using voice chat in LLM Pro:
 <strong>Neither app stores voice data or transcripts on our servers.</strong>
 </p>
 
-<h2>6. Bring Your Own API Key (Advanced Option)</h2>
+<h2>7. Bring Your Own API Key (Advanced Option)</h2>
 
 <p>
 Both apps allow you to connect your own API keys to access additional third-party AI services.
@@ -174,14 +200,16 @@ If you choose to use this feature:
 <p>
 This feature may include providers such as <strong>OpenRouter</strong> and <strong>OpenAI</strong>.
 If you use OpenRouter, OpenRouter may route requests to different model providers depending on the model selected.
-When web search is enabled in Chat LLM, search queries are processed by OpenRouter as part of the request.
+When OpenRouter web search is enabled in Chat LLM, search queries are processed by OpenRouter as part of the request.
+The query is augmented with your device's country and timezone so search results are region-relevant;
+no other personal information is included.
 </p>
 
 <p>
 We do not receive, store, or log content sent using your own API keys.
 </p>
 
-<h2>7. How Your Data Is Used</h2>
+<h2>8. How Your Data Is Used</h2>
 
 <p>
 Neither Chat LLM nor LLM Pro creates user accounts, tracks usage, or collects analytics.
@@ -191,13 +219,13 @@ We do not sell or share user data with advertisers.
 <p><strong>Neither app does the following:</strong></p>
 
 <ul>
-    <li>Store prompts, images, documents, or voice data on our servers</li>
+    <li>Store prompts, images, documents, voice data, or generated audio on our servers</li>
     <li>Store API keys on our servers</li>
     <li>Track users across apps or websites</li>
     <li>Include advertising or analytics SDKs</li>
 </ul>
 
-<h2>8. Third-Party Data Handling</h2>
+<h2>9. Third-Party Data Handling</h2>
 
 <p>
 While we do not retain your content, third-party AI providers and services may process or retain data
@@ -209,41 +237,42 @@ according to their own privacy policies and terms:
     <li>Cerebras: <a href="https://www.cerebras.ai/privacy-policy/">https://www.cerebras.ai/privacy-policy/</a></li>
     <li>Serper: <a href="https://serper.dev/privacy">https://serper.dev/privacy</a></li>
     <li>Replicate: <a href="https://replicate.com/privacy">https://replicate.com/privacy</a></li>
+    <li>Hugging Face (local model download only): <a href="https://huggingface.co/privacy">https://huggingface.co/privacy</a></li>
     <li>Google (Gemini): <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
     <li>xAI: <a href="https://x.ai/legal/privacy-policy/">https://x.ai/legal/privacy-policy/</a> and <a href="https://x.ai/legal/terms-of-service/">https://x.ai/legal/terms-of-service/</a></li>
     <li>OpenRouter: <a href="https://openrouter.ai/privacy">https://openrouter.ai/privacy</a></li>
     <li>OpenAI: <a href="https://openai.com/policies/row-privacy-policy/">https://openai.com/policies/row-privacy-policy/</a></li>
 </ul>
 
-<h2>9. Security</h2>
+<h2>10. Security</h2>
 
 <p>
 All network communication uses secure HTTPS connections.
 Local data remains on your device unless transmitted to a selected AI provider.
 </p>
 
-<h2>10. Your Rights</h2>
+<h2>11. Your Rights</h2>
 
 <p>
 Because we do not store personal data on our servers, there is no user data held by us
 to access, export, or delete.
 </p>
 
-<h2>11. Subscription Management</h2>
+<h2>12. Subscription Management</h2>
 
 <p>
 LLM Pro subscriptions are managed entirely through Apple's App Store.
 We do not process or store payment information.
 </p>
 
-<h2>12. Contact</h2>
+<h2>13. Contact</h2>
 
 <p>
 <strong>Email:</strong>
 <a href="mailto:ferrraridave@icloud.com">ferrraridave@icloud.com</a>
 </p>
 
-<h2>13. Changes to This Policy</h2>
+<h2>14. Changes to This Policy</h2>
 
 <p>
 We may update this Privacy Policy from time to time.
