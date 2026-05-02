@@ -26,7 +26,7 @@
 <body>
 
 <h1>Terms of Use for Chat LLM and LLM Pro</h1>
-<p><strong>Last updated: 1 May 2026</strong></p>
+<p><strong>Last updated: 2 May 2026</strong></p>
 
 <p>
 These Terms of Use ("Terms") govern your use of the Chat LLM and LLM Pro applications ("the Apps"),
@@ -45,8 +45,11 @@ Useful links:<br>
 <p><strong>Chat LLM</strong> provides multiple ways to interact with AI:</p>
 
 <p>
-<strong>Built-in Local Model (Optional):</strong> Chat LLM includes an optional local AI model that runs
-on your device. When using a local model, no internet connection is required and no data is sent to external servers.
+<strong>On-Device Local Model (Optional):</strong> Chat LLM offers an optional local AI model that runs entirely
+on your device. The model is not bundled with the app; it is downloaded on demand from <strong>Hugging Face</strong>
+the first time you tap the Local LLM card in the model picker. After this initial download, no internet
+connection is required and no chat content is sent to external servers when using the local model.
+You can delete the downloaded model at any time from the model picker to reclaim storage.
 </p>
 
 <p>
@@ -70,6 +73,14 @@ You may also attach photos or camera images during a voice session; these are tr
 real-time web search. When enabled, OpenRouter performs a live web search and incorporates the results into
 the model's response. A small per-search fee (~$0.004) is charged by OpenRouter to your account on top of
 normal model costs. You are responsible for any costs incurred.
+</p>
+
+<p>
+<strong>Spoken Playback of AI Replies (Optional) (Replicate):</strong> Chat LLM may play any AI reply aloud
+using the Kokoro voice model on <strong>Replicate</strong>. This feature requires you to provide your own
+Replicate API key and is hidden in the app until a key has been entered. When you tap play on an AI message,
+the message text is sent to Replicate using your own key, and the generated audio is returned and cached
+locally on your device. You are responsible for any generation costs charged by Replicate.
 </p>
 
 <p>
@@ -180,7 +191,8 @@ When using features that require your own API key, you are solely responsible fo
 
 <p>
 The Apps rely on third-party services to provide AI capabilities. Depending on which features you use, these may include:
-<strong>Groq</strong> (cloud AI), <strong>Cerebras</strong> (cloud AI), <strong>Serper</strong> (web search), <strong>Replicate</strong> (image generation),
+<strong>Groq</strong> (cloud AI), <strong>Cerebras</strong> (cloud AI), <strong>Serper</strong> (web search), <strong>Replicate</strong> (image generation in LLM Pro and spoken playback in Chat LLM),
+<strong>Hugging Face</strong> (one-time local model download in Chat LLM),
 <strong>Google</strong> (Gemini voice in Chat LLM), <strong>xAI</strong> (voice in LLM Pro where supported), <strong>OpenRouter</strong>, and <strong>OpenAI</strong>.
 Your use of those services may also be governed by their own terms and privacy policies, which you are responsible for reviewing:
 </p>
@@ -190,6 +202,7 @@ Your use of those services may also be governed by their own terms and privacy p
     <li>Cerebras: <a href="https://www.cerebras.ai/privacy-policy/">https://www.cerebras.ai/privacy-policy/</a></li>
     <li>Serper: <a href="https://serper.dev/privacy">https://serper.dev/privacy</a></li>
     <li>Replicate: <a href="https://replicate.com/privacy">https://replicate.com/privacy</a></li>
+    <li>Hugging Face: <a href="https://huggingface.co/privacy">https://huggingface.co/privacy</a></li>
     <li>Google (Gemini): <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
     <li>xAI: <a href="https://x.ai/legal/privacy-policy/">https://x.ai/legal/privacy-policy/</a> and <a href="https://x.ai/legal/terms-of-service/">https://x.ai/legal/terms-of-service/</a></li>
     <li>OpenRouter: <a href="https://openrouter.ai/privacy">https://openrouter.ai/privacy</a></li>
@@ -198,7 +211,7 @@ Your use of those services may also be governed by their own terms and privacy p
 
 <p>
 We are not responsible for the availability, performance, pricing, behaviour, or output of these third-party services.
-This section does not apply when using an on-device local model in Chat LLM.
+This section does not apply when using an on-device local model in Chat LLM (after the initial download has completed).
 </p>
 
 <h2>5. Usage Limits and Availability</h2>
@@ -225,7 +238,7 @@ We make no guarantees regarding uninterrupted availability or performance of any
 <h2>6. No Guarantee of AI Output</h2>
 
 <p>
-AI-generated responses and images may be inaccurate, incomplete, misleading, or inappropriate.
+AI-generated responses, images, and audio may be inaccurate, incomplete, misleading, or inappropriate.
 We do not guarantee the correctness, reliability, or suitability of any output produced by any AI model or provider.
 You are responsible for verifying outputs before relying on them.
 </p>
@@ -242,6 +255,7 @@ To the fullest extent permitted by law, we are not liable for:
     <li>Loss or exposure of content sent to third-party services;</li>
     <li>API usage costs incurred through BYOK features;</li>
     <li>Web search costs incurred through OpenRouter's web search feature;</li>
+    <li>Spoken playback costs incurred through Replicate in Chat LLM;</li>
     <li>Subscription billing disputes handled by Apple;</li>
     <li>Indirect or consequential damages.</li>
 </ul>
