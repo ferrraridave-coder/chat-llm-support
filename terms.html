@@ -111,12 +111,21 @@ Messages and conversation content are forwarded to <strong>Groq</strong> to gene
     <li>Real-time web search on supported models (powered by Serper)</li>
     <li>Vision capabilities on supported models (for image analysis)</li>
     <li>AI image generation and image-to-image editing with a monthly allowance (processed by Replicate)</li>
+    <li>Spoken playback of AI replies (processed by Replicate)</li>
 </ul>
 
 <p>
 <strong>AI Image Generation (Included with Subscription) (Replicate):</strong> LLM Pro includes image generation and editing
 processed by <strong>Replicate</strong>. Image generation requires an internet connection.
 A monthly image allowance applies and is displayed in-app (currently up to <strong>100 images per month</strong>).
+</p>
+
+<p>
+<strong>Spoken Playback of AI Replies (Included with Subscription) (Replicate):</strong> LLM Pro can play
+any AI reply aloud using the Kokoro voice model on <strong>Replicate</strong>. Generation requests pass
+through our backend server, which forwards them to Replicate. Generation costs are absorbed by the
+subscription — no API key is required and no per-message charge is passed on to you. Generated audio is
+cached locally on your device so repeat playback of the same message does not re-incur a generation cost.
 </p>
 
 <p>
@@ -191,7 +200,8 @@ When using features that require your own API key, you are solely responsible fo
 
 <p>
 The Apps rely on third-party services to provide AI capabilities. Depending on which features you use, these may include:
-<strong>Groq</strong> (cloud AI), <strong>Cerebras</strong> (cloud AI), <strong>Serper</strong> (web search), <strong>Replicate</strong> (image generation in LLM Pro and spoken playback in Chat LLM),
+<strong>Groq</strong> (cloud AI), <strong>Cerebras</strong> (cloud AI), <strong>Serper</strong> (web search),
+<strong>Replicate</strong> (image generation in LLM Pro, and spoken playback in both apps),
 <strong>Hugging Face</strong> (one-time local model download in Chat LLM),
 <strong>Google</strong> (Gemini voice in Chat LLM), <strong>xAI</strong> (voice in LLM Pro where supported), <strong>OpenRouter</strong>, and <strong>OpenAI</strong>.
 Your use of those services may also be governed by their own terms and privacy policies, which you are responsible for reviewing:
