@@ -57,8 +57,8 @@
 
 <p>
     <strong>LLM Pro</strong> is a premium AI chat and image generation app for iPhone and iPad. It combines
-    high-performance cloud AI models, real-time web search, vision capabilities, and built-in AI image
-    generation with clear usage limits.
+    high-performance cloud AI models, real-time web search, vision capabilities, AI image generation, and
+    spoken playback of AI replies, with clear usage limits.
 </p>
 
 <h3>Do I need an account or API key?</h3>
@@ -76,8 +76,8 @@
     <strong>LLM Pro:</strong><br>
     No account or API key is required to get started. The app includes free cloud AI access powered by Groq.
     A premium subscription unlocks additional cloud models powered by Groq and Cerebras,
-    as well as AI image generation.
-    Optional bring-your-own API keys are supported for advanced users.
+    AI image generation, and spoken playback of AI replies — all included, no third-party keys required.
+    Optional bring-your-own API keys are also supported for advanced users.
 </p>
 
 <h3>What models are supported?</h3>
@@ -96,6 +96,7 @@
     - Free cloud AI model powered by Groq<br>
     - Premium subscription unlocks curated high-performance cloud AI models powered by Groq and Cerebras<br>
     - Vision-capable models for image analysis<br>
+    - Spoken playback of AI replies powered by Kokoro TTS via Replicate (included with subscription, no key required)<br>
     - Optional bring-your-own API keys for access to additional third-party models
 </p>
 
@@ -150,14 +151,24 @@
 <h3>What is spoken playback of AI replies?</h3>
 
 <p>
-    <strong>Chat LLM</strong> can read any AI reply aloud using the Kokoro voice model via Replicate.
+    Both Chat LLM and LLM Pro can read any AI reply aloud using the Kokoro voice model via Replicate.
     Tap the play button next to any AI message to hear it spoken, with a choice of more than thirty
     voices, adjustable playback speed, and full lock-screen and Control Centre controls.
-    This feature requires your own Replicate API key, which is added in Settings then API Keys.
-    Once a key is set, the play button appears next to AI messages and a Voice Playback option
-    appears in the menu where you can change voice, speed, and audio cache size.
+    The two apps differ only in how the feature is paid for.
+</p>
+
+<p>
+    <strong>Chat LLM:</strong> Requires your own Replicate API key, added in Settings then API Keys.
+    Once a key is set, the play button appears next to AI messages and a Voice Playback option appears
+    in the menu where you can change voice, speed, and audio cache size.
     Generation costs are charged to your own Replicate credits at Replicate's standard per-second rate
     (typically a fraction of a cent per reply).
+</p>
+
+<p>
+    <strong>LLM Pro:</strong> Included as part of the LLM Pro premium subscription — no API key required.
+    The same play button, voice catalogue, speed controls, and audio cache settings are available, with
+    generation costs absorbed by the subscription.
 </p>
 
 <h3>How is my data handled?</h3>
@@ -203,11 +214,14 @@
 
 <p>
     <strong>Spoken Playback of AI Replies (Replicate / Kokoro):</strong><br>
-    When you tap play on an AI message in Chat LLM, the message text is sent to
-    <strong>Replicate</strong> using your own API key, where the Kokoro voice model converts it to audio.
-    The generated audio is downloaded to your device and cached locally so repeated playbacks
-    do not re-incur generation cost. No message text is stored on our servers.
-    Your Replicate API key is stored only on your device.
+    Available in both apps, with different routing depending on which app you're using.
+    In <strong>Chat LLM</strong>, the message text is sent directly from your device to
+    <strong>Replicate</strong> using your own API key.
+    In <strong>LLM Pro</strong>, the message text is sent to our backend server, which forwards it to
+    <strong>Replicate</strong> on your behalf — no API key required.
+    In both apps, the generated audio is downloaded to your device and cached locally so repeated
+    playbacks do not re-incur generation cost. No message text or audio is stored on our servers.
+    Your Replicate API key (Chat LLM only) is stored only on your device.
 </p>
 
 <p>
@@ -239,8 +253,8 @@
 
 <p>
     LLM Pro offers a £9.99/month subscription that unlocks premium cloud AI models powered by Groq and Cerebras,
-    real-time web search on supported models, and AI image generation processed via Replicate
-    with a monthly limit.
+    real-time web search on supported models, AI image generation processed via Replicate with a monthly limit,
+    and spoken playback of AI replies (Kokoro TTS via Replicate).
 </p>
 
 <h3>What devices are supported?</h3>
