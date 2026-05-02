@@ -101,6 +101,7 @@ When using premium subscription features:
     <li>Requests may pass through our backend server where required</li>
     <li>Responses are returned to your device</li>
     <li>Some models may retrieve up-to-date information via web search (powered by <strong>Serper</strong>)</li>
+    <li>Spoken playback of AI replies is included with the subscription (see Section 5)</li>
     <li>Subscriptions are managed entirely through Apple's App Store</li>
 </ul>
 
@@ -126,26 +127,40 @@ When using image generation or editing:
 <strong>We do not store image prompts or generated images on our servers.</strong>
 </p>
 
-<h2>5. Spoken Playback of AI Replies (Chat LLM Only) (Replicate)</h2>
+<h2>5. Spoken Playback of AI Replies (Replicate)</h2>
 
 <p>
-Chat LLM optionally lets you play any AI reply aloud using the Kokoro voice model
-hosted on <strong>Replicate</strong>. This feature requires you to supply your own Replicate API key,
-which is added in Settings then API Keys. The play button next to AI messages and the
-Voice Playback option in the menu only appear once a key has been entered.
-When using spoken playback:
+Both <strong>Chat LLM</strong> and <strong>LLM Pro</strong> can play any AI reply aloud using the
+Kokoro voice model hosted on <strong>Replicate</strong>. The two apps connect to Replicate differently.
+</p>
+
+<p>
+<strong>Chat LLM (Bring Your Own Key):</strong>
 </p>
 
 <ul>
-    <li>The text of the selected AI message is transmitted to <strong>Replicate</strong> using your own API key</li>
-    <li>Replicate generates an audio file using the Kokoro voice model and returns it to your device</li>
-    <li>Audio is cached locally on your device so repeat playback of the same message does not re-incur a generation cost</li>
+    <li>Requires you to supply your own Replicate API key in Settings then API Keys</li>
+    <li>The play button next to AI messages and the Voice Playback option in the menu only appear once a key has been entered</li>
+    <li>The text of the selected AI message is transmitted directly from your device to <strong>Replicate</strong> using your own key</li>
     <li>Generation costs are billed to your Replicate account at Replicate's standard rate</li>
     <li>Your Replicate API key is stored only on your device</li>
 </ul>
 
 <p>
-<strong>We do not store message text, audio, or your API key on our servers.</strong>
+<strong>LLM Pro (Included with Subscription):</strong>
+</p>
+
+<ul>
+    <li>Included as part of the LLM Pro premium subscription — no API key required</li>
+    <li>The text of the selected AI message is sent to our backend server</li>
+    <li>Requests are forwarded to <strong>Replicate</strong> to generate the audio</li>
+    <li>Generation costs are absorbed by us as part of the subscription</li>
+</ul>
+
+<p>
+In both apps, generated audio is downloaded to your device and cached locally so repeat playback of
+the same message does not re-incur a generation cost.
+<strong>We do not store message text or audio on our servers.</strong>
 </p>
 
 <h2>6. Voice Chat</h2>
