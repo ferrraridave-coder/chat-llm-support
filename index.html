@@ -51,8 +51,8 @@
     <strong>Chat LLM</strong> is a privacy-focused AI chat app for iPhone and iPad. It offers a free
     cloud AI model out of the box, an optional on-device AI model that runs entirely offline once
     downloaded, optional bring-your-own API keys, and advanced features such as real-time voice chat
-    with live web search, spoken playback of AI replies, image and document uploads, and access to
-    hundreds of external AI models.
+    with live web search, spoken playback of AI replies, a document reader with spoken playback,
+    image and document uploads, and access to hundreds of external AI models.
 </p>
 
 <p>
@@ -68,8 +68,8 @@
     No account or API key is required to get started. The app includes free cloud AI access powered by Groq,
     which works immediately on first launch.
     You may optionally add your own OpenRouter, OpenAI, Gemini, or Replicate API keys to unlock additional
-    features: 300+ third-party models, real-time voice chat, OpenRouter web search, and spoken playback
-    of AI replies.
+    features: 300+ third-party models, real-time voice chat, OpenRouter web search, spoken playback
+    of AI replies, and the document Reader.
 </p>
 
 <p>
@@ -89,7 +89,7 @@
     - Optional on-device AI model (Llama 3.2, downloaded on demand from the model picker — runs locally and works offline once installed)<br>
     - Optional bring-your-own API keys for access to 300+ third-party models via OpenRouter or OpenAI<br>
     - Optional real-time voice chat powered by Google Gemini Live (requires a Gemini API key)<br>
-    - Optional spoken playback of AI replies powered by Kokoro TTS via Replicate (requires a Replicate API key)
+    - Optional spoken playback of AI replies and Reader mode, both powered by Kokoro TTS via Replicate (requires a Replicate API key)
 </p>
 
 <p>
@@ -183,6 +183,26 @@
     generation costs absorbed by the subscription.
 </p>
 
+<h3>What is Reader mode? (Chat LLM only)</h3>
+
+<p>
+    Reader mode turns Chat LLM into an audiobook player for your own content. Select Reader from the
+    model picker, then import a PDF, EPUB, or TXT file, or paste any text directly, and Reader speaks
+    it sentence by sentence using Kokoro voices via Replicate.
+</p>
+
+<p>
+    Tap any sentence to jump straight to it. Adjust voice and playback speed to your preference.
+    Your position in each document is saved automatically so you can pick up exactly where you left off.
+    A built-in library keeps all your imported documents in one place.
+</p>
+
+<p>
+    Reader uses the same Replicate API key as spoken playback of AI replies — one key covers both
+    features. Generation costs are charged to your own Replicate credits at approximately $0.0005
+    per request. Reader mode is only available in Chat LLM.
+</p>
+
 <h3>How is my data handled?</h3>
 
 <p>
@@ -233,14 +253,15 @@
 </p>
 
 <p>
-    <strong>Spoken Playback of AI Replies (Replicate / Kokoro):</strong><br>
-    Available in both apps, with different routing depending on which app you're using.
-    In <strong>Chat LLM</strong>, the message text is sent directly from your device to
-    <strong>Replicate</strong> using your own API key.
-    In <strong>LLM Pro</strong>, the message text is sent to our backend server, which forwards it to
+    <strong>Spoken Playback of AI Replies and Reader Mode (Replicate / Kokoro):</strong><br>
+    Available in both apps for spoken playback of AI replies; Reader mode is Chat LLM only.
+    In <strong>Chat LLM</strong>, message text and Reader document text are sent directly from your
+    device to <strong>Replicate</strong> using your own API key.
+    In <strong>LLM Pro</strong>, message text is sent to our backend server, which forwards it to
     <strong>Replicate</strong> on your behalf — no API key required.
     In both apps, the generated audio is downloaded to your device and cached locally so repeated
-    playbacks do not re-incur generation cost. No message text or audio is stored on our servers.
+    playbacks do not re-incur generation cost. No message text, document text, or audio is stored
+    on our servers.
     Your Replicate API key (Chat LLM only) is stored only on your device.
 </p>
 
@@ -257,8 +278,8 @@
 <p>
     <strong>Chat LLM:</strong> The optional on-device Llama model works fully offline once downloaded
     from the model picker — no internet connection is required after that initial download.
-    All cloud-based features — including Groq, OpenRouter, OpenAI, Gemini voice chat, and Replicate
-    spoken playback — require an internet connection.<br><br>
+    All cloud-based features — including Groq, OpenRouter, OpenAI, Gemini voice chat, Replicate
+    spoken playback, and Reader mode — require an internet connection.<br><br>
     <strong>LLM Pro:</strong> Requires an internet connection for all features.
 </p>
 
