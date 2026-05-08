@@ -30,7 +30,7 @@
 
 <h1>Privacy Policy for Chat LLM and LLM Pro</h1>
 
-<p><strong>Last updated: 2 May 2026</strong></p>
+<p><strong>Last updated: 8 May 2026</strong></p>
 
 <p>
 Chat LLM and LLM Pro are developed and maintained by <strong>David Picknell</strong> ("we", "us", "our").
@@ -127,11 +127,13 @@ When using image generation or editing:
 <strong>We do not store image prompts or generated images on our servers.</strong>
 </p>
 
-<h2>5. Spoken Playback of AI Replies (Replicate)</h2>
+<h2>5. Spoken Playback and Reader Mode (Replicate)</h2>
 
 <p>
-Both <strong>Chat LLM</strong> and <strong>LLM Pro</strong> can play any AI reply aloud using the
-Kokoro voice model hosted on <strong>Replicate</strong>. The two apps connect to Replicate differently.
+<strong>Chat LLM</strong> supports two features powered by the Kokoro voice model on <strong>Replicate</strong>:
+spoken playback of any AI reply, and Reader mode — an audiobook player for PDFs, EPUBs, TXT files,
+and pasted text. <strong>LLM Pro</strong> supports spoken playback of AI replies only.
+Both apps connect to Replicate differently.
 </p>
 
 <p>
@@ -140,8 +142,9 @@ Kokoro voice model hosted on <strong>Replicate</strong>. The two apps connect to
 
 <ul>
     <li>Requires you to supply your own Replicate API key in Settings then API Keys</li>
-    <li>The play button next to AI messages and the Voice Playback option in the menu only appear once a key has been entered</li>
-    <li>The text of the selected AI message is transmitted directly from your device to <strong>Replicate</strong> using your own key</li>
+    <li>The play button next to AI messages and the Voice Playback option in the menu only appear once a key has been entered; Reader mode is similarly gated</li>
+    <li>For spoken playback: the text of the selected AI message is transmitted directly from your device to <strong>Replicate</strong> using your own key</li>
+    <li>For Reader mode: the text of the current sentence being synthesised is transmitted directly from your device to <strong>Replicate</strong> using your own key; document text is processed locally and only the active sentence is sent at a time</li>
     <li>Generation costs are billed to your Replicate account at Replicate's standard rate</li>
     <li>Your Replicate API key is stored only on your device</li>
 </ul>
@@ -151,16 +154,17 @@ Kokoro voice model hosted on <strong>Replicate</strong>. The two apps connect to
 </p>
 
 <ul>
-    <li>Included as part of the LLM Pro premium subscription — no API key required</li>
+    <li>Spoken playback of AI replies is included as part of the LLM Pro premium subscription — no API key required</li>
     <li>The text of the selected AI message is sent to our backend server</li>
     <li>Requests are forwarded to <strong>Replicate</strong> to generate the audio</li>
     <li>Generation costs are absorbed by us as part of the subscription</li>
+    <li>Reader mode is not available in LLM Pro</li>
 </ul>
 
 <p>
 In both apps, generated audio is downloaded to your device and cached locally so repeat playback of
 the same message does not re-incur a generation cost.
-<strong>We do not store message text or audio on our servers.</strong>
+<strong>We do not store message text, document text, or audio on our servers.</strong>
 </p>
 
 <h2>6. Voice Chat</h2>
