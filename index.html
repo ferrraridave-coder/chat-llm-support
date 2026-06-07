@@ -50,9 +50,11 @@
 <p>
     <strong>Chat LLM</strong> is a privacy-focused AI chat app for iPhone and iPad. It offers a free
     cloud AI model out of the box, an optional on-device AI model that runs entirely offline once
-    downloaded, optional bring-your-own API keys, and advanced features such as real-time voice chat
-    with live web search, spoken playback of AI replies, a document reader with spoken playback,
-    image and document uploads, and access to hundreds of external AI models.
+    downloaded, and optional bring-your-own-key features: access to 300+ models via OpenRouter,
+    real-time voice chat with Google Gemini or xAI Grok, a connection to your own Mac's local models
+    through LM Studio, and a document Reader that speaks PDFs, EPUBs, text, and webpages aloud using
+    your choice of premium text-to-speech voices. Your settings and system prompts back up to your
+    own iCloud automatically.
 </p>
 
 <p>
@@ -67,9 +69,11 @@
     <strong>Chat LLM:</strong><br>
     No account or API key is required to get started. The app includes free cloud AI access powered by Groq,
     which works immediately on first launch.
-    You may optionally add your own OpenRouter, OpenAI, Gemini, or Replicate API keys to unlock additional
-    features: 300+ third-party models, real-time voice chat, OpenRouter web search, spoken playback
-    of AI replies, and the document Reader.
+    You may optionally add your own API keys to unlock more: <strong>OpenRouter</strong> (300+ models and
+    web search), <strong>Google Gemini</strong> (voice chat), <strong>xAI</strong> (Grok voice chat), and
+    the Reader text-to-speech providers <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, and
+    <strong>ElevenLabs</strong>. You can also connect to your own Mac running <strong>LM Studio</strong>, and
+    optionally add a <strong>Groq</strong> key for tidier webpage import in Reader.
 </p>
 
 <p>
@@ -87,9 +91,10 @@
     <strong>Chat LLM:</strong><br>
     - Free cloud AI model powered by Groq (works immediately, no key required)<br>
     - Optional on-device AI model (Llama 3.2, downloaded on demand from the model picker — runs locally and works offline once installed)<br>
-    - Optional bring-your-own API keys for access to 300+ third-party models via OpenRouter or OpenAI<br>
-    - Optional real-time voice chat powered by Google Gemini Live (requires a Gemini API key)<br>
-    - Optional spoken playback of AI replies and Reader mode, both powered by Kokoro TTS via Replicate (requires a Replicate API key)
+    - Optional access to 300+ third-party models via OpenRouter (requires your own OpenRouter key)<br>
+    - Optional connection to your own Mac's local models through LM Studio over Tailscale<br>
+    - Optional real-time voice chat with Google Gemini Live (requires a Gemini API key) or xAI Grok (requires an xAI API key)<br>
+    - Optional Reader text-to-speech via OpenRouter Kokoro, MiniMax, or ElevenLabs (requires your own key for the chosen provider)
 </p>
 
 <p>
@@ -109,6 +114,28 @@
     Image generation and editing are processed via Replicate.
     The premium subscription includes up to <strong>100 images per month</strong>.
     Image usage is clearly displayed in-app.
+</p>
+
+<h3>Connect to your own Mac with LM Studio (Chat LLM only)</h3>
+
+<p>
+    Chat LLM can connect to <strong>LM Studio</strong> running on your own computer and use any model
+    you have loaded there — from your iPhone or iPad, anywhere — over a private
+    <a href="https://tailscale.com/">Tailscale</a> connection. You can browse, load, and unload your
+    LM Studio models directly from within Chat LLM, with a built-in connection test, and the chat
+    experience is identical to every other provider.
+</p>
+
+<p>
+    Because the models run on your own hardware, there are no per-message API credits, no rate limits,
+    and no content restrictions — the only cost is your own electricity and broadband. Your chat content
+    is sent over your private network connection to your own machine; it is not sent to us or to any
+    third-party cloud provider.
+</p>
+
+<p>
+    <strong>What you need:</strong> LM Studio installed on your computer, and Tailscale installed on both
+    your computer and your iPhone/iPad (both free).
 </p>
 
 <h3>What is real-time web search?</h3>
@@ -140,14 +167,22 @@
 
 <p>
     <strong>Chat LLM:</strong><br>
-    Real-time Voice Chat enables natural spoken conversations with AI powered by Google Gemini Live.
-    This feature requires your own Gemini API key.
-    Spoken input and conversation content are processed by Google.
-    Voice chat includes built-in Google Search grounding, so Gemini can answer questions about
-    current events and live information during your conversation.
-    You can also attach photos or camera images mid-conversation for Gemini to discuss.
-    The voice assistant's personality, accent, speech style, and behaviour can be shaped through
-    the system prompt.
+    Chat LLM offers real-time spoken conversations with AI through two optional backends, each using
+    your own API key:
+</p>
+<p>
+    <strong>Google Gemini Live</strong> (requires a Gemini API key): natural real-time conversation with
+    a choice of voices, built-in Google Search grounding so it can answer questions about current events
+    and live information, and the ability to attach photos or camera images mid-conversation for Gemini
+    to discuss. Spoken input and conversation content are processed by Google.
+</p>
+<p>
+    <strong>xAI Grok</strong> (requires an xAI API key): a fast, real-time voice backend with its own set
+    of voices. Spoken input and conversation content are processed by xAI.
+</p>
+<p>
+    Each backend has its own system prompts, so the assistant's personality, accent, speech style, and
+    behaviour can be shaped independently for each one.
 </p>
 
 <p>
@@ -160,26 +195,18 @@
     The voice assistant's personality, style, and behaviour can be shaped through the system prompt.
 </p>
 
-<h3>What is spoken playback of AI replies?</h3>
+<h3>How do I hear an AI reply read aloud? (Chat LLM)</h3>
 
 <p>
-    Both Chat LLM and LLM Pro can read any AI reply aloud using the Kokoro voice model via Replicate.
-    Tap the play button next to any AI message to hear it spoken, with a choice of more than thirty
-    voices, adjustable playback speed, and full lock-screen and Control Centre controls.
-    The two apps differ only in how the feature is paid for.
+    In Chat LLM, spoken playback is handled by <strong>Reader</strong>, the app's dedicated playback screen.
+    To hear any AI reply aloud, long-press the message and share it into Reader, where it is read using your
+    chosen text-to-speech voice with full transport and lock-screen controls. See Reader mode below for the
+    available voices.
 </p>
 
 <p>
-    <strong>Chat LLM:</strong> Requires your own Replicate API key, added in Settings then API Keys.
-    Once a key is set, the play button appears next to AI messages and a Voice Playback option appears
-    in the menu where you can change voice, speed, and audio cache size.
-    Generation costs are charged to your own Replicate credits at Replicate's standard per-second rate
-    (typically a fraction of a cent per reply).
-</p>
-
-<p>
-    <strong>LLM Pro:</strong> Included as part of the LLM Pro premium subscription — no API key required.
-    The same play button, voice catalogue, speed controls, and audio cache settings are available, with
+    <strong>LLM Pro:</strong> Spoken playback is included as part of the LLM Pro premium subscription — no API
+    key required. A play button, voice catalogue, speed controls, and audio cache settings are available, with
     generation costs absorbed by the subscription.
 </p>
 
@@ -187,20 +214,36 @@
 
 <p>
     Reader mode turns Chat LLM into an audiobook player for your own content. Select Reader from the
-    model picker, then import a PDF, EPUB, or TXT file, or paste any text directly, and Reader speaks
-    it sentence by sentence using Kokoro voices via Replicate.
+    model picker, then import a PDF, EPUB, or TXT file, paste any text, or share a webpage or document
+    into the app from the iOS share sheet — Reader speaks it aloud, sentence by sentence.
 </p>
 
 <p>
-    Tap any sentence to jump straight to it. Adjust voice and playback speed to your preference.
-    Your position in each document is saved automatically so you can pick up exactly where you left off.
-    A built-in library keeps all your imported documents in one place.
+    Choose from three text-to-speech providers, set per document:
+    <strong>OpenRouter Kokoro</strong> (the dirt-cheap everyday option),
+    <strong>MiniMax</strong> (very high quality and great value), and
+    <strong>ElevenLabs</strong> (best-in-class, most expressive narration).
+    Each uses your own API key for the chosen provider.
 </p>
 
 <p>
-    Reader uses the same Replicate API key as spoken playback of AI replies — one key covers both
-    features. Generation costs are charged to your own Replicate credits at approximately $0.0005
-    per request. Reader mode is only available in Chat LLM.
+    Tap any sentence to jump straight to it, and adjust voice and playback speed per document.
+    Your position in each document is saved automatically so you can pick up exactly where you left off,
+    and a built-in library keeps all your imported documents in one place.
+    Your MiniMax and ElevenLabs account voices sync automatically each time you open Reader, you can
+    search long voice lists, and you can star favourites. Generation costs are billed to your own provider
+    account — a fraction of a cent per request with Kokoro; MiniMax and ElevenLabs vary by plan.
+    Reader mode is only available in Chat LLM.
+</p>
+
+<h3>Do my settings sync across devices? (Chat LLM)</h3>
+
+<p>
+    Yes. Chat LLM backs up your settings and all of your system prompts — including the individual
+    system prompts for each provider and the secondary prompts used by the voice providers — to your
+    own <strong>iCloud</strong> account, so they restore automatically across your devices and after a
+    reinstall. This uses Apple's iCloud and we have no access to it. Your conversations and imported
+    Reader documents are deliberately <strong>not</strong> synced.
 </p>
 
 <h3>How is my data handled?</h3>
@@ -227,17 +270,24 @@
 </p>
 
 <p>
-    <strong>Bring Your Own API Key (OpenRouter, OpenAI):</strong><br>
-    When you use your own API key, messages and content are sent directly to the selected provider,
-    such as <strong>OpenRouter</strong> or <strong>OpenAI</strong>.
-    OpenRouter may route requests to different model providers depending on the model selected.
+    <strong>Bring Your Own API Key (OpenRouter):</strong><br>
+    When you use your own OpenRouter API key in Chat LLM, messages and content are sent directly to
+    <strong>OpenRouter</strong>, which may route requests to different model providers depending on the
+    model selected.
     When OpenRouter web search is enabled, search queries are also processed by OpenRouter.
     API keys are stored only on your device.
 </p>
 
 <p>
+    <strong>LM Studio (Chat LLM):</strong><br>
+    If you connect Chat LLM to LM Studio running on your own computer, your chat content is sent over
+    your private network / Tailscale connection directly to your own machine. It is not sent to us or
+    to any third-party cloud provider.
+</p>
+
+<p>
     <strong>Voice Chat (Google Gemini, Chat LLM):</strong><br>
-    When using real-time voice chat in Chat LLM, spoken input, conversation content, and any images
+    When using Gemini voice chat in Chat LLM, spoken input, conversation content, and any images
     you attach are sent to <strong>Google</strong> to generate AI responses.
     Google Search grounding may be used automatically to answer questions requiring live information.
     No voice data or transcripts are stored on our servers.
@@ -245,28 +295,46 @@
 </p>
 
 <p>
-    <strong>Voice Chat (xAI, LLM Pro):</strong><br>
-    When using real-time voice chat in LLM Pro, spoken input and conversation content are sent to
+    <strong>Voice Chat (xAI Grok, Chat LLM and LLM Pro):</strong><br>
+    When using Grok voice chat, spoken input and conversation content are sent to
     <strong>xAI</strong> to generate AI responses.
     No voice data or transcripts are stored on our servers.
     Your xAI API key is stored only on your device.
 </p>
 
 <p>
-    <strong>Spoken Playback of AI Replies and Reader Mode (Replicate / Kokoro):</strong><br>
-    Available in both apps for spoken playback of AI replies; Reader mode is Chat LLM only.
-    In <strong>Chat LLM</strong>, message text and Reader document text are sent directly from your
-    device to <strong>Replicate</strong> using your own API key.
-    In <strong>LLM Pro</strong>, message text is sent to our backend server, which forwards it to
-    <strong>Replicate</strong> on your behalf — no API key required.
-    In both apps, the generated audio is downloaded to your device and cached locally so repeated
-    playbacks do not re-incur generation cost. No message text, document text, or audio is stored
-    on our servers.
-    Your Replicate API key (Chat LLM only) is stored only on your device.
+    <strong>Reader & Text-to-Speech (Chat LLM):</strong><br>
+    Reader sends the text being synthesised directly from your device to the text-to-speech provider you
+    select — <strong>OpenRouter</strong> (Kokoro), <strong>MiniMax</strong>, or <strong>ElevenLabs</strong>
+    — using your own API key for that provider. The generated audio is downloaded to your device and
+    cached locally so repeat playback does not re-incur a generation cost. No document text or audio is
+    stored on our servers, and your provider API keys are stored only on your device.
 </p>
 
 <p>
-    <strong>AI Image Generation (Replicate):</strong><br>
+    <strong>Webpage import cleanup (optional, Chat LLM):</strong><br>
+    Reader cleans imported webpages on your device by default. If you add your own
+    <strong>Groq</strong> API key, webpage text can optionally be sent to Groq to be tidied up for clearer
+    narration. This is optional and off unless you add a Groq key.
+</p>
+
+<p>
+    <strong>Settings & System Prompt Sync (Apple iCloud, Chat LLM):</strong><br>
+    Your settings and system prompts are backed up to your personal <strong>iCloud</strong> account so they
+    restore across your devices. This uses Apple's iCloud; we have no access to it. Conversations and
+    imported Reader documents are not synced.
+</p>
+
+<p>
+    <strong>Spoken Playback of AI Replies (LLM Pro, Replicate / Kokoro):</strong><br>
+    In <strong>LLM Pro</strong>, message text is sent to our backend server, which forwards it to
+    <strong>Replicate</strong> on your behalf to generate the audio — no API key required.
+    The generated audio is downloaded to your device and cached locally. No message text or audio is
+    stored on our servers.
+</p>
+
+<p>
+    <strong>AI Image Generation (LLM Pro, Replicate):</strong><br>
     When generating or editing images in LLM Pro, prompt text and any selected images are sent to
     <strong>Replicate</strong> for processing.
     Replicate processes this data to generate AI images within the app.
@@ -278,8 +346,8 @@
 <p>
     <strong>Chat LLM:</strong> The optional on-device Llama model works fully offline once downloaded
     from the model picker — no internet connection is required after that initial download.
-    All cloud-based features — including Groq, OpenRouter, OpenAI, Gemini voice chat, Replicate
-    spoken playback, and Reader mode — require an internet connection.<br><br>
+    All other features require a connection: Groq free chat, OpenRouter, Gemini and Grok voice chat,
+    Reader text-to-speech, and LM Studio (which needs a network connection to your own computer).<br><br>
     <strong>LLM Pro:</strong> Requires an internet connection for all features.
 </p>
 

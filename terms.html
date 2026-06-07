@@ -26,7 +26,7 @@
 <body>
 
 <h1>Terms of Use for Chat LLM and LLM Pro</h1>
-<p><strong>Last updated: 8 May 2026</strong></p>
+<p><strong>Last updated: 7 June 2026</strong></p>
 
 <p>
 These Terms of Use ("Terms") govern your use of the Chat LLM and LLM Pro applications ("the Apps"),
@@ -60,12 +60,12 @@ Messages and conversation content are forwarded to <strong>Groq</strong> to gene
 </p>
 
 <p>
-<strong>Voice Chat (Optional) (Google Gemini):</strong> Chat LLM supports real-time voice conversations powered by <strong>Google Gemini</strong>.
-This feature requires you to provide your own Gemini API key.
-You are responsible for any API usage costs charged by Google.
-Voice chat includes built-in Google Search grounding, which means Gemini may automatically perform web searches
-to answer questions about current events or live information.
-You may also attach photos or camera images during a voice session; these are transmitted to Google for processing.
+<strong>Voice Chat (Optional) (Google Gemini or xAI Grok):</strong> Chat LLM supports real-time voice conversations
+through two backends. With <strong>Google Gemini</strong> (requires your own Gemini API key), voice chat includes
+built-in Google Search grounding, so Gemini may automatically perform web searches to answer questions about current
+events or live information, and you may attach photos or camera images during a session; these are transmitted to
+Google for processing. With <strong>xAI Grok</strong> (requires your own xAI API key), spoken input and conversation
+content are processed by xAI. You are responsible for any API usage costs charged by the provider you use.
 </p>
 
 <p>
@@ -76,25 +76,40 @@ normal model costs. You are responsible for any costs incurred.
 </p>
 
 <p>
-<strong>Spoken Playback of AI Replies (Optional) (Replicate):</strong> Chat LLM may play any AI reply aloud
-using the Kokoro voice model on <strong>Replicate</strong>. This feature requires you to provide your own
-Replicate API key and is hidden in the app until a key has been entered. When you tap play on an AI message,
-the message text is sent to Replicate using your own key, and the generated audio is returned and cached
-locally on your device. You are responsible for any generation costs charged by Replicate.
+<strong>Spoken Playback of AI Replies (Chat LLM):</strong> In Chat LLM, spoken playback of AI replies is handled
+by Reader. To hear a reply aloud, share the message into Reader (see Reader Mode below), where it is read using your
+selected text-to-speech provider and your own API key. You are responsible for any generation costs charged by that
+provider.
 </p>
 
 <p>
-<strong>Reader Mode (Optional) (Replicate):</strong> Chat LLM includes a document reader that speaks any
-imported PDF, EPUB, TXT file, or pasted text aloud, sentence by sentence, using the Kokoro voice model on
-<strong>Replicate</strong>. This feature requires the same Replicate API key as spoken playback of AI replies
-and is hidden in the app until a key has been entered. Text from the document is sent to Replicate
-sentence by sentence to generate audio, which is returned and cached locally on your device.
-You are responsible for any generation costs charged by Replicate.
+<strong>Reader Mode (Optional):</strong> Chat LLM includes a document reader that speaks any imported PDF, EPUB,
+TXT file, pasted text, or shared webpage/document aloud, sentence by sentence. You choose a text-to-speech provider
+per document — <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, or <strong>ElevenLabs</strong> —
+using your own API key for the chosen provider. Text is sent to the selected provider to generate audio, which is
+returned and cached locally on your device. You are responsible for any generation costs charged by that provider.
+When importing a webpage, you may optionally add your own <strong>Groq</strong> API key to clean up the page text
+for clearer narration.
 </p>
 
 <p>
-<strong>Bring Your Own API Key (Optional):</strong> Chat LLM may allow you to connect your own API keys to use
-third-party AI services such as <strong>OpenRouter</strong> or <strong>OpenAI</strong>.
+<strong>LM Studio (Optional):</strong> Chat LLM can connect to <strong>LM Studio</strong> running on your own computer
+and use models hosted there, over your own private network (for example, a Tailscale connection). Your chat content
+is sent directly to your own machine and not to us or any third-party cloud provider. You are responsible for running
+and securing your own LM Studio server.
+</p>
+
+<p>
+<strong>Settings Sync (Optional) (Apple iCloud):</strong> Chat LLM backs up your settings and system prompts to your
+own iCloud account so they restore across your devices. Your conversations and imported Reader documents are not
+synced. This uses Apple's iCloud and is governed by Apple's terms.
+</p>
+
+<p>
+<strong>Bring Your Own API Key (Optional):</strong> Chat LLM allows you to connect your own API keys to use
+third-party services — including <strong>OpenRouter</strong> (text chat and web search), <strong>Google Gemini</strong>
+and <strong>xAI</strong> (voice chat), and <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, and
+<strong>ElevenLabs</strong> (Reader text-to-speech), plus an optional <strong>Groq</strong> key for webpage cleanup.
 When using this option, the App sends your content (text, and where supported images and documents) to the selected provider
 and displays the responses returned. If you use OpenRouter, OpenRouter may route requests to different model providers depending on the model selected.
 We do not operate or control third-party services or models.
@@ -209,10 +224,12 @@ When using features that require your own API key, you are solely responsible fo
 
 <p>
 The Apps rely on third-party services to provide AI capabilities. Depending on which features you use, these may include:
-<strong>Groq</strong> (cloud AI), <strong>Cerebras</strong> (cloud AI), <strong>Serper</strong> (web search),
-<strong>Replicate</strong> (image generation in LLM Pro; spoken playback in both apps; Reader mode in Chat LLM),
+<strong>Groq</strong> (cloud AI; optional webpage cleanup in Chat LLM Reader), <strong>Cerebras</strong> (cloud AI in LLM Pro), <strong>Serper</strong> (web search in LLM Pro),
+<strong>Replicate</strong> (image generation and spoken playback in LLM Pro),
+<strong>OpenRouter</strong> (text chat, web search, and Kokoro Reader voice in Chat LLM),
+<strong>MiniMax</strong> and <strong>ElevenLabs</strong> (Reader text-to-speech in Chat LLM),
 <strong>Hugging Face</strong> (one-time local model download in Chat LLM),
-<strong>Google</strong> (Gemini voice in Chat LLM), <strong>xAI</strong> (voice in LLM Pro where supported), <strong>OpenRouter</strong>, and <strong>OpenAI</strong>.
+<strong>Google</strong> (Gemini voice in Chat LLM), <strong>xAI</strong> (Grok voice in Chat LLM and LLM Pro), and <strong>OpenAI</strong> (LLM Pro).
 Your use of those services may also be governed by their own terms and privacy policies, which you are responsible for reviewing:
 </p>
 
@@ -225,6 +242,8 @@ Your use of those services may also be governed by their own terms and privacy p
     <li>Google (Gemini): <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
     <li>xAI: <a href="https://x.ai/legal/privacy-policy/">https://x.ai/legal/privacy-policy/</a> and <a href="https://x.ai/legal/terms-of-service/">https://x.ai/legal/terms-of-service/</a></li>
     <li>OpenRouter: <a href="https://openrouter.ai/privacy">https://openrouter.ai/privacy</a></li>
+    <li>MiniMax: <a href="https://www.minimax.io/privacy-policy">https://www.minimax.io/privacy-policy</a></li>
+    <li>ElevenLabs: <a href="https://elevenlabs.io/privacy">https://elevenlabs.io/privacy</a></li>
     <li>OpenAI: <a href="https://openai.com/policies/row-privacy-policy/">https://openai.com/policies/row-privacy-policy/</a></li>
 </ul>
 
@@ -274,7 +293,7 @@ To the fullest extent permitted by law, we are not liable for:
     <li>Loss or exposure of content sent to third-party services;</li>
     <li>API usage costs incurred through BYOK features;</li>
     <li>Web search costs incurred through OpenRouter's web search feature;</li>
-    <li>Spoken playback or Reader mode costs incurred through Replicate in Chat LLM;</li>
+    <li>Reader text-to-speech costs incurred through your own OpenRouter, MiniMax, or ElevenLabs account in Chat LLM;</li>
     <li>Subscription billing disputes handled by Apple;</li>
     <li>Indirect or consequential damages.</li>
 </ul>

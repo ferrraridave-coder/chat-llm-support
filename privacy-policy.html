@@ -30,7 +30,7 @@
 
 <h1>Privacy Policy for Chat LLM and LLM Pro</h1>
 
-<p><strong>Last updated: 8 May 2026</strong></p>
+<p><strong>Last updated: 7 June 2026</strong></p>
 
 <p>
 Chat LLM and LLM Pro are developed and maintained by <strong>David Picknell</strong> ("we", "us", "our").
@@ -101,7 +101,7 @@ When using premium subscription features:
     <li>Requests may pass through our backend server where required</li>
     <li>Responses are returned to your device</li>
     <li>Some models may retrieve up-to-date information via web search (powered by <strong>Serper</strong>)</li>
-    <li>Spoken playback of AI replies is included with the subscription (see Section 5)</li>
+    <li>Spoken playback of AI replies is included with the subscription (see Section 6)</li>
     <li>Subscriptions are managed entirely through Apple's App Store</li>
 </ul>
 
@@ -127,62 +127,79 @@ When using image generation or editing:
 <strong>We do not store image prompts or generated images on our servers.</strong>
 </p>
 
-<h2>5. Spoken Playback and Reader Mode (Replicate)</h2>
+<h2>5. Reader and Text-to-Speech (Chat LLM)</h2>
 
 <p>
-<strong>Chat LLM</strong> supports two features powered by the Kokoro voice model on <strong>Replicate</strong>:
-spoken playback of any AI reply, and Reader mode — an audiobook player for PDFs, EPUBs, TXT files,
-and pasted text. <strong>LLM Pro</strong> supports spoken playback of AI replies only.
-Both apps connect to Replicate differently.
-</p>
-
-<p>
-<strong>Chat LLM (Bring Your Own Key):</strong>
+Chat LLM's <strong>Reader</strong> is an audiobook-style player for PDFs, EPUBs, TXT files, pasted text,
+and webpages or documents shared into the app. Reader is also where any AI reply is read aloud (you
+share a message into Reader). Reader speaks text using a text-to-speech provider that you choose, per
+document, using your own API key for that provider:
 </p>
 
 <ul>
-    <li>Requires you to supply your own Replicate API key in Settings then API Keys</li>
-    <li>The play button next to AI messages and the Voice Playback option in the menu only appear once a key has been entered; Reader mode is similarly gated</li>
-    <li>For spoken playback: the text of the selected AI message is transmitted directly from your device to <strong>Replicate</strong> using your own key</li>
-    <li>For Reader mode: the text of the current sentence being synthesised is transmitted directly from your device to <strong>Replicate</strong> using your own key; document text is processed locally and only the active sentence is sent at a time</li>
-    <li>Generation costs are billed to your Replicate account at Replicate's standard rate</li>
-    <li>Your Replicate API key is stored only on your device</li>
+    <li><strong>OpenRouter (Kokoro voice model)</strong> — requires your own OpenRouter API key</li>
+    <li><strong>MiniMax</strong> — requires your own MiniMax API key</li>
+    <li><strong>ElevenLabs</strong> — requires your own ElevenLabs API key</li>
+</ul>
+
+<ul>
+    <li>The text being synthesised is transmitted directly from your device to the selected provider using your own key; document text is processed locally and only the text needed for the current and upcoming sentences is sent</li>
+    <li>Generated audio is downloaded to your device and cached locally so repeat playback does not re-incur a generation cost</li>
+    <li>Generation costs are billed to your own provider account at that provider's standard rate</li>
+    <li>Your provider API keys are stored only on your device</li>
+    <li>When you import a webpage, the page is cleaned on your device by default; if you optionally add your own <strong>Groq</strong> API key, the webpage text may be sent to Groq to be tidied up for clearer narration</li>
 </ul>
 
 <p>
-<strong>LLM Pro (Included with Subscription):</strong>
+<strong>We do not store message text, document text, or audio on our servers.</strong>
+Reader mode is only available in Chat LLM.
+</p>
+
+<h2>6. Spoken Playback of AI Replies (LLM Pro Only) (Replicate)</h2>
+
+<p>
+LLM Pro can read any AI reply aloud using the Kokoro voice model on <strong>Replicate</strong>,
+included as part of the premium subscription — no API key required.
 </p>
 
 <ul>
-    <li>Spoken playback of AI replies is included as part of the LLM Pro premium subscription — no API key required</li>
     <li>The text of the selected AI message is sent to our backend server</li>
     <li>Requests are forwarded to <strong>Replicate</strong> to generate the audio</li>
     <li>Generation costs are absorbed by us as part of the subscription</li>
-    <li>Reader mode is not available in LLM Pro</li>
+    <li>Generated audio is downloaded to your device and cached locally so repeat playback of the same message does not re-incur a generation cost</li>
 </ul>
 
 <p>
-In both apps, generated audio is downloaded to your device and cached locally so repeat playback of
-the same message does not re-incur a generation cost.
-<strong>We do not store message text, document text, or audio on our servers.</strong>
+<strong>We do not store message text or audio on our servers.</strong>
+Reader mode is not available in LLM Pro.
 </p>
 
-<h2>6. Voice Chat</h2>
+<h2>7. LM Studio — Your Own Computer (Chat LLM Only)</h2>
 
 <p>
-<strong>Chat LLM — Real-time Voice Chat (Google Gemini):</strong><br>
-Chat LLM supports real-time voice conversations powered by <strong>Google Gemini</strong>.
-This feature requires you to supply your own Gemini API key.
-When using voice chat in Chat LLM:
+Chat LLM can connect to <strong>LM Studio</strong> running on your own computer and use models hosted
+there. When you use this feature:
 </p>
 
 <ul>
-    <li>Your spoken input and conversation content are transmitted to <strong>Google</strong> to generate AI responses</li>
+    <li>Your chat content is sent over your own private network connection (for example, a <strong>Tailscale</strong> connection) directly to your own computer</li>
+    <li>It is not sent to us, and it is not sent to any third-party cloud AI provider</li>
+    <li>The connection endpoint and any access token you configure are stored only on your device</li>
+</ul>
+
+<h2>8. Voice Chat</h2>
+
+<p>
+<strong>Chat LLM — Real-time Voice Chat (Google Gemini and xAI Grok):</strong><br>
+Chat LLM supports real-time voice conversations through two optional backends, each requiring your own
+API key for that provider.
+</p>
+
+<ul>
+    <li><strong>Google Gemini:</strong> your spoken input, conversation content, and any images or photos you attach during a voice session are transmitted to <strong>Google</strong> to generate AI responses. Gemini may automatically perform Google Search queries to answer questions about current events, weather, or other live information. Your Gemini API key is stored only on your device.</li>
+    <li><strong>xAI Grok:</strong> your spoken input and conversation content are transmitted to <strong>xAI</strong> to generate AI responses. Your xAI API key is stored only on your device.</li>
     <li>Audio is processed in real time for speech recognition and response generation</li>
-    <li>Any images or photos you attach during a voice session are also transmitted to <strong>Google</strong> for processing</li>
-    <li>Gemini may automatically perform Google Search queries to answer questions about current events, weather, or other live information</li>
     <li>Conversation transcripts may be stored locally on your device</li>
-    <li>Your Gemini API key is stored only on your device</li>
 </ul>
 
 <p>
@@ -203,7 +220,20 @@ When using voice chat in LLM Pro:
 <strong>Neither app stores voice data or transcripts on our servers.</strong>
 </p>
 
-<h2>7. Bring Your Own API Key (Advanced Option)</h2>
+<h2>9. Settings and System Prompt Sync (Apple iCloud, Chat LLM Only)</h2>
+
+<p>
+Chat LLM backs up your settings and system prompts to your own <strong>iCloud</strong> account so they
+restore across your devices and after reinstalling the app.
+</p>
+
+<ul>
+    <li>What is synced: app settings, generation settings, reading preferences, your selected voices, and all of your system prompts (including the per-provider prompts and the secondary prompts used by the voice providers)</li>
+    <li>What is <strong>not</strong> synced: your conversations and your imported Reader documents</li>
+    <li>This uses Apple's iCloud, tied to your Apple ID; the data is stored in your own iCloud, not on our servers, and we have no access to it</li>
+</ul>
+
+<h2>10. Bring Your Own API Key (Advanced Option)</h2>
 
 <p>
 Both apps allow you to connect your own API keys to access additional third-party AI services.
@@ -217,18 +247,22 @@ If you choose to use this feature:
 </ul>
 
 <p>
-This feature may include providers such as <strong>OpenRouter</strong> and <strong>OpenAI</strong>.
-If you use OpenRouter, OpenRouter may route requests to different model providers depending on the model selected.
-When OpenRouter web search is enabled in Chat LLM, search queries are processed by OpenRouter as part of the request.
-The query is augmented with your device's country and timezone so search results are region-relevant;
-no other personal information is included.
+In <strong>Chat LLM</strong>, these providers may include <strong>OpenRouter</strong> (text chat and web
+search), <strong>Google Gemini</strong> and <strong>xAI</strong> (voice chat), and
+<strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, and <strong>ElevenLabs</strong> (Reader
+text-to-speech), plus an optional <strong>Groq</strong> key for webpage import cleanup and a connection to
+your own <strong>LM Studio</strong> server.
+If you use OpenRouter, OpenRouter may route requests to different model providers depending on the model
+selected. When OpenRouter web search is enabled in Chat LLM, search queries are processed by OpenRouter as
+part of the request; the query is augmented with your device's country and timezone so search results are
+region-relevant, and no other personal information is included.
 </p>
 
 <p>
 We do not receive, store, or log content sent using your own API keys.
 </p>
 
-<h2>8. How Your Data Is Used</h2>
+<h2>11. How Your Data Is Used</h2>
 
 <p>
 Neither Chat LLM nor LLM Pro creates user accounts, tracks usage, or collects analytics.
@@ -244,7 +278,7 @@ We do not sell or share user data with advertisers.
     <li>Include advertising or analytics SDKs</li>
 </ul>
 
-<h2>9. Third-Party Data Handling</h2>
+<h2>12. Third-Party Data Handling</h2>
 
 <p>
 While we do not retain your content, third-party AI providers and services may process or retain data
@@ -260,38 +294,41 @@ according to their own privacy policies and terms:
     <li>Google (Gemini): <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
     <li>xAI: <a href="https://x.ai/legal/privacy-policy/">https://x.ai/legal/privacy-policy/</a> and <a href="https://x.ai/legal/terms-of-service/">https://x.ai/legal/terms-of-service/</a></li>
     <li>OpenRouter: <a href="https://openrouter.ai/privacy">https://openrouter.ai/privacy</a></li>
+    <li>MiniMax: <a href="https://www.minimax.io/privacy-policy">https://www.minimax.io/privacy-policy</a></li>
+    <li>ElevenLabs: <a href="https://elevenlabs.io/privacy">https://elevenlabs.io/privacy</a></li>
     <li>OpenAI: <a href="https://openai.com/policies/row-privacy-policy/">https://openai.com/policies/row-privacy-policy/</a></li>
+    <li>Apple iCloud: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
 </ul>
 
-<h2>10. Security</h2>
+<h2>13. Security</h2>
 
 <p>
 All network communication uses secure HTTPS connections.
 Local data remains on your device unless transmitted to a selected AI provider.
 </p>
 
-<h2>11. Your Rights</h2>
+<h2>14. Your Rights</h2>
 
 <p>
 Because we do not store personal data on our servers, there is no user data held by us
 to access, export, or delete.
 </p>
 
-<h2>12. Subscription Management</h2>
+<h2>15. Subscription Management</h2>
 
 <p>
 LLM Pro subscriptions are managed entirely through Apple's App Store.
 We do not process or store payment information.
 </p>
 
-<h2>13. Contact</h2>
+<h2>16. Contact</h2>
 
 <p>
 <strong>Email:</strong>
 <a href="mailto:ferrraridave@icloud.com">ferrraridave@icloud.com</a>
 </p>
 
-<h2>14. Changes to This Policy</h2>
+<h2>17. Changes to This Policy</h2>
 
 <p>
 We may update this Privacy Policy from time to time.
