@@ -71,8 +71,8 @@
     which works immediately on first launch.
     You may optionally add your own API keys to unlock more: <strong>OpenRouter</strong> (300+ models and
     web search), <strong>Google Gemini</strong> (voice chat), <strong>xAI</strong> (Grok voice chat), and
-    the Reader text-to-speech providers <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, and
-    <strong>ElevenLabs</strong>. You can also connect to your own Mac running <strong>LM Studio</strong>, and
+    the Reader text-to-speech providers <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>,
+    <strong>ElevenLabs</strong>, and <strong>Fish Audio</strong>. You can also connect to your own Mac running <strong>LM Studio</strong>, and
     optionally add a <strong>Groq</strong> key for tidier webpage import in Reader.
 </p>
 
@@ -94,7 +94,7 @@
     - Optional access to 300+ third-party models via OpenRouter (requires your own OpenRouter key)<br>
     - Optional connection to your own Mac's local models through LM Studio over Tailscale<br>
     - Optional real-time voice chat with Google Gemini Live (requires a Gemini API key) or xAI Grok (requires an xAI API key)<br>
-    - Optional Reader text-to-speech via OpenRouter Kokoro, MiniMax, or ElevenLabs (requires your own key for the chosen provider)
+    - Optional Reader text-to-speech via OpenRouter Kokoro, MiniMax, ElevenLabs, or Fish Audio (requires your own key for the chosen provider)
 </p>
 
 <p>
@@ -177,8 +177,9 @@
     to discuss. Spoken input and conversation content are processed by Google.
 </p>
 <p>
-    <strong>xAI Grok</strong> (requires an xAI API key): a fast, real-time voice backend with its own set
-    of voices. Spoken input and conversation content are processed by xAI.
+    <strong>xAI Grok</strong> (requires an xAI API key): a fast, real-time voice backend with a large,
+    automatically-updated library of voices spanning many languages and accents. Spoken input and
+    conversation content are processed by xAI.
 </p>
 <p>
     Each backend has its own system prompts, so the assistant's personality, accent, speech style, and
@@ -219,10 +220,11 @@
 </p>
 
 <p>
-    Choose from three text-to-speech providers, set per document:
+    Choose from four text-to-speech providers, set per document:
     <strong>OpenRouter Kokoro</strong> (the dirt-cheap everyday option),
-    <strong>MiniMax</strong> (very high quality and great value), and
-    <strong>ElevenLabs</strong> (best-in-class, most expressive narration).
+    <strong>MiniMax</strong> (very high quality and great value),
+    <strong>ElevenLabs</strong> (expressive narration, including your own cloned voices), and
+    <strong>Fish Audio</strong> (a huge library of expressive community and custom voices across countless languages and accents, at excellent value).
     Each uses your own API key for the chosen provider.
 </p>
 
@@ -230,9 +232,10 @@
     Tap any sentence to jump straight to it, and adjust voice and playback speed per document.
     Your position in each document is saved automatically so you can pick up exactly where you left off,
     and a built-in library keeps all your imported documents in one place.
-    Your MiniMax and ElevenLabs account voices sync automatically each time you open Reader, you can
-    search long voice lists, and you can star favourites. Generation costs are billed to your own provider
-    account — a fraction of a cent per request with Kokoro; MiniMax and ElevenLabs vary by plan.
+    Your MiniMax and ElevenLabs account voices refresh automatically each time you open Reader, you can
+    search large voice libraries — including Fish Audio's millions of community voices — and you can star
+    favourites. Generation costs are billed to your own provider account — a fraction of a cent per request
+    with Kokoro; Fish Audio is inexpensive pay-as-you-go; MiniMax and ElevenLabs vary by plan.
     Reader mode is only available in Chat LLM.
 </p>
 
@@ -305,7 +308,7 @@
 <p>
     <strong>Reader & Text-to-Speech (Chat LLM):</strong><br>
     Reader sends the text being synthesised directly from your device to the text-to-speech provider you
-    select — <strong>OpenRouter</strong> (Kokoro), <strong>MiniMax</strong>, or <strong>ElevenLabs</strong>
+    select — <strong>OpenRouter</strong> (Kokoro), <strong>MiniMax</strong>, <strong>ElevenLabs</strong>, or <strong>Fish Audio</strong>
     — using your own API key for that provider. The generated audio is downloaded to your device and
     cached locally so repeat playback does not re-incur a generation cost. No document text or audio is
     stored on our servers, and your provider API keys are stored only on your device.
