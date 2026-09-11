@@ -22,7 +22,7 @@
 <main class="page">
     <span class="eyebrow">Legal</span>
     <h1>Terms of Use for Chat LLM and LLM Pro</h1>
-<p><strong>Last updated: 16 June 2026</strong></p>
+<p><strong>Last updated: 11 September 2026</strong></p>
 
 <p>
 These Terms of Use ("Terms") govern your use of the Chat LLM and LLM Pro applications ("the Apps"),
@@ -60,8 +60,27 @@ Messages and conversation content are forwarded to <strong>Groq</strong> to gene
 through two backends. With <strong>Google Gemini</strong> (requires your own Gemini API key), voice chat includes
 built-in Google Search grounding, so Gemini may automatically perform web searches to answer questions about current
 events or live information, and you may attach photos or camera images during a session; these are transmitted to
-Google for processing. With <strong>xAI Grok</strong> (requires your own xAI API key), spoken input and conversation
-content are processed by xAI. You are responsible for any API usage costs charged by the provider you use.
+Google for processing. With <strong>xAI Grok</strong> (requires your own xAI API key, or sign in with your xAI
+account to use your existing xAI subscription), spoken input and conversation
+content are processed by xAI. You are responsible for any API usage or subscription costs charged by the provider you use.
+</p>
+
+<p>
+<strong>Grok Text Chat (Optional) (xAI):</strong> When you are signed in with your xAI account (or have provided an
+xAI API key), Grok text models are available in the model picker. Messages and conversation content are sent to
+<strong>xAI</strong> to generate responses, using your xAI subscription or API account. You are responsible for any
+costs charged by xAI.
+</p>
+
+<p>
+<strong>AI Image and Video Generation (Optional) (OpenRouter or xAI):</strong> Chat LLM can generate images and
+videos into the chat thread using media models from <strong>OpenRouter</strong> (requires your own OpenRouter API
+key) or <strong>xAI</strong> (requires your own xAI API key or an xAI sign-in). Your prompt and any reference images
+you provide are sent to the selected provider, and the result is stored on your device. Generation and editing costs
+are billed by the provider to your own account; per-model prices are shown in the app where the provider publishes
+them. Cancelling an in-progress generation in the app may not stop the provider from completing the job and billing
+it. You are responsible for ensuring you have the rights to any reference images you supply and for how you use
+generated media.
 </p>
 
 <p>
@@ -81,8 +100,9 @@ provider.
 <p>
 <strong>Reader Mode (Optional):</strong> Chat LLM includes a document reader that speaks any imported PDF, EPUB,
 TXT file, pasted text, or shared webpage/document aloud, sentence by sentence. You choose a text-to-speech provider
-per document — <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, <strong>ElevenLabs</strong>, or <strong>Fish Audio</strong> —
-using your own API key for the chosen provider. Text is sent to the selected provider to generate audio, which is
+per document — <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, <strong>ElevenLabs</strong>,
+<strong>Fish Audio</strong>, or <strong>xAI</strong> —
+using your own API key for the chosen provider (or your xAI sign-in for xAI). Text is sent to the selected provider to generate audio, which is
 returned and cached locally on your device. You are responsible for any generation costs charged by that provider.
 When importing a webpage, you may optionally add your own <strong>Groq</strong> API key to clean up the page text
 for clearer narration.
@@ -91,8 +111,10 @@ for clearer narration.
 <p>
 <strong>LM Studio (Optional):</strong> Chat LLM can connect to <strong>LM Studio</strong> running on your own computer
 and use models hosted there, over your own private network (for example, a Tailscale connection). Your chat content
-is sent directly to your own machine and not to us or any third-party cloud provider. You are responsible for running
-and securing your own LM Studio server.
+is sent directly to your own machine and not to us or any third-party cloud provider. If you configure MCP tool
+server names, the model may invoke those tools on your own machine, and any external requests they make originate
+from your computer. You are responsible for running and securing your own LM Studio server and any tool servers it
+calls.
 </p>
 
 <p>
@@ -104,9 +126,10 @@ and is governed by Apple's terms.
 
 <p>
 <strong>Bring Your Own API Key (Optional):</strong> Chat LLM allows you to connect your own API keys to use
-third-party services — including <strong>OpenRouter</strong> (text chat and web search), <strong>Google Gemini</strong>
-and <strong>xAI</strong> (voice chat), and <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>,
-<strong>ElevenLabs</strong>, and <strong>Fish Audio</strong> (Reader text-to-speech), plus an optional <strong>Groq</strong> key for webpage cleanup.
+third-party services — including <strong>OpenRouter</strong> (text chat, web search, and image and video
+generation), <strong>Google Gemini</strong> and <strong>xAI</strong> (voice chat; xAI also covers Grok text chat
+and media generation via key or account sign-in), and <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>,
+<strong>ElevenLabs</strong>, <strong>Fish Audio</strong>, and <strong>xAI</strong> (Reader text-to-speech), plus an optional <strong>Groq</strong> key for webpage cleanup.
 When using this option, the App sends your content (text, and where supported images and documents) to the selected provider
 and displays the responses returned. If you use OpenRouter, OpenRouter may route requests to different model providers depending on the model selected.
 We do not operate or control third-party services or models.

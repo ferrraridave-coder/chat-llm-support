@@ -23,7 +23,7 @@
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy for Chat LLM and LLM Pro</h1>
 
-<p><strong>Last updated: 14 June 2026</strong></p>
+<p><strong>Last updated: 11 September 2026</strong></p>
 
 <p>
 Chat LLM and LLM Pro are developed and maintained by <strong>David Picknell</strong> ("we", "us", "our").
@@ -134,6 +134,7 @@ document, using your own API key for that provider:
     <li><strong>MiniMax</strong> — requires your own MiniMax API key</li>
     <li><strong>ElevenLabs</strong> — requires your own ElevenLabs API key</li>
     <li><strong>Fish Audio</strong> — requires your own Fish Audio API key</li>
+    <li><strong>xAI</strong> — requires your own xAI API key, or sign in with your xAI account to use your xAI subscription</li>
 </ul>
 
 <ul>
@@ -148,6 +149,41 @@ document, using your own API key for that provider:
 <p>
 <strong>We do not store message text, document text, or audio on our servers.</strong>
 Reader mode is only available in Chat LLM.
+</p>
+
+<h2>5A. AI Image and Video Generation (Chat LLM)</h2>
+
+<p>
+Chat LLM can generate images and videos into the chat thread using third-party providers you choose.
+When you generate media in Chat LLM:
+</p>
+
+<ul>
+    <li>Your prompt and any reference images you attach are transmitted directly from your device to the selected provider — <strong>OpenRouter</strong> (with your own OpenRouter API key) or <strong>xAI</strong> (with your own xAI API key or your xAI sign-in)</li>
+    <li>OpenRouter may route the request to different model providers depending on the model selected</li>
+    <li>The finished image or video is downloaded to your device and stored in the conversation it was requested from</li>
+    <li>Generation costs are billed by the provider to your own account at that provider's rates</li>
+</ul>
+
+<p>
+<strong>We do not store media prompts, reference images, or generated images or videos on our servers.</strong>
+</p>
+
+<h2>5B. Grok Text Chat (Chat LLM, with xAI Sign-In)</h2>
+
+<p>
+If you sign in with your xAI account, Grok text models become available in Chat LLM's model picker.
+When you chat with a Grok model:
+</p>
+
+<ul>
+    <li>Your messages and conversation content are transmitted directly from your device to <strong>xAI</strong> to generate AI responses, using your xAI subscription</li>
+    <li>Sign-in uses xAI's device-code flow; the resulting sign-in token is stored only on your device (in the iOS Keychain) and can be removed by signing out in the app</li>
+    <li>If you have also entered an xAI API key, the key is used instead of the sign-in</li>
+</ul>
+
+<p>
+<strong>We do not store your messages or responses on our servers.</strong>
 </p>
 
 <h2>6. Spoken Playback of AI Replies (LLM Pro Only) (Replicate)</h2>
@@ -180,19 +216,21 @@ there. When you use this feature:
     <li>Your chat content is sent over your own private network connection (for example, a <strong>Tailscale</strong> connection) directly to your own computer</li>
     <li>It is not sent to us, and it is not sent to any third-party cloud AI provider</li>
     <li>The connection endpoint and any access token you configure are stored only on your device</li>
+    <li>If you configure MCP tool server names (from your LM Studio configuration), the model can invoke those tools; any external requests the tools make (for example, a web search) originate from your own computer, not from your phone</li>
 </ul>
 
 <h2>8. Voice Chat</h2>
 
 <p>
 <strong>Chat LLM — Real-time Voice Chat (Google Gemini and xAI Grok):</strong><br>
-Chat LLM supports real-time voice conversations through two optional backends, each requiring your own
-API key for that provider.
+Chat LLM supports real-time voice conversations through two optional backends. Gemini requires your own
+Gemini API key; Grok requires your own xAI API key, or you can sign in with your xAI account to use your
+xAI subscription instead of a key.
 </p>
 
 <ul>
     <li><strong>Google Gemini:</strong> your spoken input, conversation content, and any images or photos you attach during a voice session are transmitted to <strong>Google</strong> to generate AI responses. Gemini may automatically perform Google Search queries to answer questions about current events, weather, or other live information. Your Gemini API key is stored only on your device.</li>
-    <li><strong>xAI Grok:</strong> your spoken input and conversation content are transmitted to <strong>xAI</strong> to generate AI responses. Your xAI API key is stored only on your device.</li>
+    <li><strong>xAI Grok:</strong> your spoken input and conversation content are transmitted to <strong>xAI</strong> to generate AI responses. Your xAI API key is stored only on your device. If you sign in with your xAI account instead, the sign-in uses xAI's device-code flow and the resulting token is stored only on your device (in the iOS Keychain); you can remove it by signing out in the app.</li>
     <li>Audio is processed in real time for speech recognition and response generation</li>
     <li>Conversation transcripts may be stored locally on your device</li>
 </ul>
@@ -242,9 +280,11 @@ If you choose to use this feature:
 </ul>
 
 <p>
-In <strong>Chat LLM</strong>, these providers may include <strong>OpenRouter</strong> (text chat and web
-search), <strong>Google Gemini</strong> and <strong>xAI</strong> (voice chat), and
-<strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, <strong>ElevenLabs</strong>, and <strong>Fish Audio</strong> (Reader
+In <strong>Chat LLM</strong>, these providers may include <strong>OpenRouter</strong> (text chat, web
+search, and image and video generation), <strong>Google Gemini</strong> (voice chat),
+<strong>xAI</strong> (voice chat, and — with a key or sign-in — Grok text chat, media generation, and
+Reader text-to-speech), <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>,
+<strong>ElevenLabs</strong>, and <strong>Fish Audio</strong> (Reader
 text-to-speech), plus an optional <strong>Groq</strong> key for webpage import cleanup and a connection to
 your own <strong>LM Studio</strong> server.
 If you use OpenRouter, OpenRouter may route requests to different model providers depending on the model
