@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Terms of Use for Chat LLM." />
-    <title>Chat LLM & LLM Pro — Terms of Use</title>
+    <meta name="description" content="Terms of Use for LLM Pro." />
+    <title>LLM Pro — Terms of Use</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <nav class="navbar">
     <div class="navbar-inner">
-        <a href="index.html" class="navbar-brand"><span class="brand-dot"></span> Chat LLM</a>
+        <a href="index.html" class="navbar-brand"><span class="brand-dot"></span> LLM Pro</a>
         <div class="navbar-links">
             <a href="index.html">Support</a>
             <a href="privacy-policy.html">Privacy</a>
@@ -21,13 +21,14 @@
 
 <main class="page">
     <span class="eyebrow">Legal</span>
-    <h1>Terms of Use for Chat LLM and LLM Pro</h1>
-<p><strong>Last updated: 11 September 2026</strong></p>
+    <h1>Terms of Use for LLM Pro</h1>
+<p><strong>Last updated: 15 October 2026</strong></p>
 
 <p>
-These Terms of Use ("Terms") govern your use of the Chat LLM and LLM Pro applications ("the Apps"),
-developed and maintained by <strong>David Picknell</strong> ("we", "us", "our"). By using either App,
-you agree to be bound by these Terms. If you do not agree, you should stop using the Apps.
+These Terms of Use ("Terms") govern your use of the LLM Pro application ("the App"),
+developed and maintained by <strong>David Picknell</strong> ("we", "us", "our").
+LLM Pro is no longer for sale, but these Terms continue to apply for existing owners.
+By using the App, you agree to be bound by these Terms. If you do not agree, you should stop using the App.
 </p>
 
 <p>
@@ -36,108 +37,11 @@ Useful links:<br>
 - <a href="privacy-policy.html">Privacy Policy</a>
 </p>
 
-<h2>1. Description of the Services</h2>
-
-<p><strong>Chat LLM</strong> provides multiple ways to interact with AI:</p>
+<h2>1. Description of the Service</h2>
 
 <p>
-<strong>On-Device Local Model (Optional):</strong> Chat LLM offers an optional local AI model that runs entirely
-on your device. The model is not bundled with the app; it is downloaded on demand from <strong>Hugging Face</strong>
-the first time you tap the Local LLM card in the model picker. After this initial download, no internet
-connection is required and no chat content is sent to external servers when using the local model.
-You can delete the downloaded model at any time from the model picker to reclaim storage.
+<strong>LLM Pro</strong> provides the following AI interaction options:
 </p>
-
-<p>
-<strong>Free Cloud AI (Groq):</strong> Chat LLM provides a free cloud AI option that does not require an API key.
-This service requires an internet connection and may be subject to shared usage limits across users.
-Free cloud AI is text-only and does not support image or document uploads.
-Messages and conversation content are forwarded to <strong>Groq</strong> to generate AI responses.
-</p>
-
-<p>
-<strong>Voice Chat (Optional) (Google Gemini or xAI Grok):</strong> Chat LLM supports real-time voice conversations
-through two backends. With <strong>Google Gemini</strong> (requires your own Gemini API key), voice chat includes
-built-in Google Search grounding, so Gemini may automatically perform web searches to answer questions about current
-events or live information, and you may attach photos or camera images during a session; these are transmitted to
-Google for processing. With <strong>xAI Grok</strong> (requires your own xAI API key, or sign in with your xAI
-account to use your existing xAI subscription), spoken input and conversation
-content are processed by xAI. You are responsible for any API usage or subscription costs charged by the provider you use.
-</p>
-
-<p>
-<strong>Grok Text Chat (Optional) (xAI):</strong> When you are signed in with your xAI account (or have provided an
-xAI API key), Grok text models are available in the model picker. Messages and conversation content are sent to
-<strong>xAI</strong> to generate responses, using your xAI subscription or API account. You are responsible for any
-costs charged by xAI.
-</p>
-
-<p>
-<strong>AI Image and Video Generation (Optional) (OpenRouter or xAI):</strong> Chat LLM can generate images and
-videos into the chat thread using media models from <strong>OpenRouter</strong> (requires your own OpenRouter API
-key) or <strong>xAI</strong> (requires your own xAI API key or an xAI sign-in). Your prompt and any reference images
-you provide are sent to the selected provider, and the result is stored on your device. Generation and editing costs
-are billed by the provider to your own account; per-model prices are shown in the app where the provider publishes
-them. Cancelling an in-progress generation in the app may not stop the provider from completing the job and billing
-it. You are responsible for ensuring you have the rights to any reference images you supply and for how you use
-generated media.
-</p>
-
-<p>
-<strong>Web Search (Optional) (OpenRouter):</strong> When using OpenRouter models in Chat LLM, you may enable
-real-time web search. When enabled, OpenRouter performs a live web search and incorporates the results into
-the model's response. A small per-search fee (~$0.004) is charged by OpenRouter to your account on top of
-normal model costs. You are responsible for any costs incurred.
-</p>
-
-<p>
-<strong>Spoken Playback of AI Replies (Chat LLM):</strong> In Chat LLM, spoken playback of AI replies is handled
-by Reader. To hear a reply aloud, share the message into Reader (see Reader Mode below), where it is read using your
-selected text-to-speech provider and your own API key. You are responsible for any generation costs charged by that
-provider.
-</p>
-
-<p>
-<strong>Reader Mode (Optional):</strong> Chat LLM includes a document reader that speaks any imported PDF, EPUB,
-TXT file, pasted text, or shared webpage/document aloud, sentence by sentence. You choose a text-to-speech provider
-per document — <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>, <strong>ElevenLabs</strong>,
-<strong>Fish Audio</strong>, or <strong>xAI</strong> —
-using your own API key for the chosen provider (or your xAI sign-in for xAI). Text is sent to the selected provider to generate audio, which is
-returned and cached locally on your device. You are responsible for any generation costs charged by that provider.
-When importing a webpage, you may optionally add your own <strong>Groq</strong> API key to clean up the page text
-for clearer narration.
-</p>
-
-<p>
-<strong>LM Studio (Optional):</strong> Chat LLM can connect to <strong>LM Studio</strong> running on your own computer
-and use models hosted there, over your own private network (for example, a Tailscale connection). Your chat content
-is sent directly to your own machine and not to us or any third-party cloud provider. If you configure MCP tool
-server names, the model may invoke those tools on your own machine, and any external requests they make originate
-from your computer. You are responsible for running and securing your own LM Studio server and any tool servers it
-calls.
-</p>
-
-<p>
-<strong>iCloud Sync (Optional) (Apple iCloud):</strong> Chat LLM backs up your settings, system prompts,
-conversations, and imported Reader documents to your own iCloud account so they restore across your devices and
-after reinstalling. The data is stored in your own private iCloud, not on our servers. This uses Apple's iCloud
-and is governed by Apple's terms.
-</p>
-
-<p>
-<strong>Bring Your Own API Key (Optional):</strong> Chat LLM allows you to connect your own API keys to use
-third-party services — including <strong>OpenRouter</strong> (text chat, web search, and image and video
-generation), <strong>Google Gemini</strong> and <strong>xAI</strong> (voice chat; xAI also covers Grok text chat
-and media generation via key or account sign-in), and <strong>OpenRouter (Kokoro)</strong>, <strong>MiniMax</strong>,
-<strong>ElevenLabs</strong>, <strong>Fish Audio</strong>, and <strong>xAI</strong> (Reader text-to-speech), plus an optional <strong>Groq</strong> key for webpage cleanup.
-When using this option, the App sends your content (text, and where supported images and documents) to the selected provider
-and displays the responses returned. If you use OpenRouter, OpenRouter may route requests to different model providers depending on the model selected.
-We do not operate or control third-party services or models.
-</p>
-
-<hr>
-
-<p><strong>LLM Pro</strong> provides the following AI interaction options:</p>
 
 <p>
 <strong>Free Cloud AI (Groq):</strong> LLM Pro includes a free cloud AI option that does not require an API key.
@@ -191,11 +95,13 @@ and displays the responses returned. If you use OpenRouter, OpenRouter may route
 We do not operate or control third-party services or models.
 </p>
 
-<h2>2. Premium Subscription (LLM Pro Only)</h2>
+<h2>2. Premium Subscription</h2>
 
 <p>
 LLM Pro offers a premium subscription billed monthly through your Apple ID.
 Subscription pricing, entitlements, and usage limits are displayed in-app and in the App Store.
+LLM Pro is no longer available for new purchases; existing subscribers can continue to manage their
+subscription through Apple's App Store.
 </p>
 
 <p><strong>Subscription Terms:</strong></p>
@@ -217,7 +123,7 @@ We do not have access to your payment information or the ability to process refu
 <h2>3. User Responsibilities</h2>
 
 <p>
-You agree that you will not use the Apps to:
+You agree that you will not use the App to:
 </p>
 
 <ul>
@@ -226,17 +132,14 @@ You agree that you will not use the Apps to:
     <li>Submit sensitive personal data of others without consent;</li>
     <li>Misuse, overload, or attempt to interfere with our services or third-party services;</li>
     <li>Attempt to circumvent usage limits, image allowances, or rate limits;</li>
-    <li>Use the Apps for unlawful or prohibited purposes.</li>
+    <li>Use the App for unlawful or prohibited purposes.</li>
 </ul>
 
 <p>
 You are solely responsible for ensuring you have the necessary rights to any content you import into,
-process with, or export from the Apps &mdash; including documents, webpages, and text you add to Reader, and
-any audio files you export from it. Reader's text-to-speech and audio-export features are intended for content
-you own or are otherwise permitted to use (for example, your own material, public-domain works, or content you
-hold a licence or other right to use). You must not reproduce, distribute, or share exported audio &mdash; or
-any other content produced with the Apps &mdash; in a way that infringes the copyright, privacy, or other
-rights of any third party. You are responsible for how you use and share anything you export.
+process with, or export from the App, and for how you use and share anything you export.
+You must not reproduce, distribute, or share content produced with the App in a way that infringes
+the copyright, privacy, or other rights of any third party.
 </p>
 
 <p>
@@ -253,13 +156,10 @@ When using features that require your own API key, you are solely responsible fo
 <h2>4. Third-Party Services</h2>
 
 <p>
-The Apps rely on third-party services to provide AI capabilities. Depending on which features you use, these may include:
-<strong>Groq</strong> (cloud AI; optional webpage cleanup in Chat LLM Reader), <strong>Cerebras</strong> (cloud AI in LLM Pro), <strong>Serper</strong> (web search in LLM Pro),
-<strong>Replicate</strong> (image generation and spoken playback in LLM Pro),
-<strong>OpenRouter</strong> (text chat, web search, and Kokoro Reader voice in Chat LLM),
-<strong>MiniMax</strong>, <strong>ElevenLabs</strong>, and <strong>Fish Audio</strong> (Reader text-to-speech in Chat LLM),
-<strong>Hugging Face</strong> (one-time local model download in Chat LLM),
-<strong>Google</strong> (Gemini voice in Chat LLM), <strong>xAI</strong> (Grok voice in Chat LLM and LLM Pro), and <strong>OpenAI</strong> (LLM Pro).
+The App relies on third-party services to provide AI capabilities. Depending on which features you use, these may include:
+<strong>Groq</strong> (cloud AI), <strong>Cerebras</strong> (cloud AI), <strong>Serper</strong> (web search),
+<strong>Replicate</strong> (image generation and spoken playback),
+<strong>xAI</strong> (optional voice chat), <strong>OpenRouter</strong> (optional BYOK), and <strong>OpenAI</strong> (optional BYOK).
 Your use of those services may also be governed by their own terms and privacy policies, which you are responsible for reviewing:
 </p>
 
@@ -268,25 +168,19 @@ Your use of those services may also be governed by their own terms and privacy p
     <li>Cerebras: <a href="https://www.cerebras.ai/privacy-policy/">https://www.cerebras.ai/privacy-policy/</a></li>
     <li>Serper: <a href="https://serper.dev/privacy">https://serper.dev/privacy</a></li>
     <li>Replicate: <a href="https://replicate.com/privacy">https://replicate.com/privacy</a></li>
-    <li>Hugging Face: <a href="https://huggingface.co/privacy">https://huggingface.co/privacy</a></li>
-    <li>Google (Gemini): <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
     <li>xAI: <a href="https://x.ai/legal/privacy-policy/">https://x.ai/legal/privacy-policy/</a> and <a href="https://x.ai/legal/terms-of-service/">https://x.ai/legal/terms-of-service/</a></li>
     <li>OpenRouter: <a href="https://openrouter.ai/privacy">https://openrouter.ai/privacy</a></li>
-    <li>MiniMax: <a href="https://www.minimax.io/privacy-policy">https://www.minimax.io/privacy-policy</a></li>
-    <li>ElevenLabs: <a href="https://elevenlabs.io/privacy">https://elevenlabs.io/privacy</a></li>
-    <li>Fish Audio: <a href="https://fish.audio/privacy/">https://fish.audio/privacy/</a></li>
     <li>OpenAI: <a href="https://openai.com/policies/row-privacy-policy/">https://openai.com/policies/row-privacy-policy/</a></li>
 </ul>
 
 <p>
 We are not responsible for the availability, performance, pricing, behaviour, or output of these third-party services.
-This section does not apply when using an on-device local model in Chat LLM (after the initial download has completed).
 </p>
 
 <h2>5. Usage Limits and Availability</h2>
 
 <p>
-Free cloud AI access in both Apps may be subject to shared usage limits across users. We reserve the right to:
+Free cloud AI access may be subject to shared usage limits across users. We reserve the right to:
 </p>
 
 <ul>
@@ -323,8 +217,6 @@ To the fullest extent permitted by law, we are not liable for:
     <li>Service interruptions or unavailability of free cloud AI or subscription features;</li>
     <li>Loss or exposure of content sent to third-party services;</li>
     <li>API usage costs incurred through BYOK features;</li>
-    <li>Web search costs incurred through OpenRouter's web search feature;</li>
-    <li>Reader text-to-speech costs incurred through your own OpenRouter, MiniMax, ElevenLabs, or Fish Audio account in Chat LLM;</li>
     <li>Subscription billing disputes handled by Apple;</li>
     <li>Indirect or consequential damages.</li>
 </ul>
@@ -332,15 +224,15 @@ To the fullest extent permitted by law, we are not liable for:
 <h2>8. Termination</h2>
 
 <p>
-We may suspend or restrict access to the Apps if we reasonably believe you are misusing them or violating these Terms.
-You may stop using the Apps at any time by uninstalling them. Active subscriptions continue until the end of the
+We may suspend or restrict access to the App if we reasonably believe you are misusing it or violating these Terms.
+You may stop using the App at any time by uninstalling it. Active subscriptions continue until the end of the
 current billing period unless cancelled through the App Store.
 </p>
 
 <h2>9. Changes to These Terms</h2>
 
 <p>
-We may update these Terms from time to time. Continued use of the Apps after changes are posted constitutes acceptance
+We may update these Terms from time to time. Continued use of the App after changes are posted constitutes acceptance
 of the updated Terms.
 </p>
 
